@@ -1,0 +1,7 @@
+minos.aggregate.events.contextvars module
+=========================================
+
+.. automodule:: minos.aggregate.events.contextvars
+   :members:
+   :undoc-members:
+   :show-inheritance:
