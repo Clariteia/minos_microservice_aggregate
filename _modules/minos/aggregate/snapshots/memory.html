@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.snapshots.memory &mdash; Minos Microservice Aggregate 0.1.0 documentation</title>
+  <title>minos.aggregate.snapshots.memory &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -291,7 +291,7 @@
             <span class="n">transaction_uuids</span> <span class="o">=</span> <span class="k">await</span> <span class="n">transaction</span><span class="o">.</span><span class="n">uuids</span>
 
         <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">transaction_uuids</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">transaction</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transaction_repository</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">transaction_uuids</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="fm">__anext__</span><span class="p">()</span>
+            <span class="n">transaction</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transaction_repository</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">transaction_uuids</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
             <span class="k">if</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="n">TransactionStatus</span><span class="o">.</span><span class="n">REJECTED</span><span class="p">:</span>
                 <span class="k">break</span>
             <span class="n">transaction_uuids</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">transaction_uuids</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>

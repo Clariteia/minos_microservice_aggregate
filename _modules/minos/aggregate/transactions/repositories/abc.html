@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.transactions.repositories.abc &mdash; Minos Microservice Aggregate 0.1.0 documentation</title>
+  <title>minos.aggregate.transactions.repositories.abc &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -186,6 +186,9 @@
     <span class="n">NotProvidedException</span><span class="p">,</span>
 <span class="p">)</span>
 
+<span class="kn">from</span> <span class="nn">...exceptions</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">TransactionNotFoundException</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span> <span class="nn">..entries</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">TransactionEntry</span><span class="p">,</span>
     <span class="n">TransactionStatus</span><span class="p">,</span>
@@ -202,7 +205,7 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">lock_pool</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lock_pool</span><span class="p">,</span> <span class="n">Provide</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="n">NotProvidedException</span><span class="p">(</span><span class="s2">&quot;A transaction repository instance is required.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">NotProvidedException</span><span class="p">(</span><span class="s2">&quot;A lock pool instance is required.&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_lock_pool</span> <span class="o">=</span> <span class="n">lock_pool</span></div>
 
@@ -217,6 +220,19 @@
     <span class="nd">@abstractmethod</span>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">_submit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transaction</span><span class="p">:</span> <span class="n">TransactionEntry</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TransactionEntry</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="c1"># noinspection PyUnusedLocal</span>
+<div class="viewcode-block" id="TransactionRepository.get"><a class="viewcode-back" href="../../../../../api/minos.aggregate.transactions.repositories.abc.html#minos.aggregate.transactions.repositories.abc.TransactionRepository.get">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uuid</span><span class="p">:</span> <span class="n">UUID</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TransactionEntry</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Get a ``TransactionEntry`` from its identifier.</span>
+
+<span class="sd">        :param uuid: Identifier of the ``Aggregate``.</span>
+<span class="sd">        :param kwargs: Additional named arguments.</span>
+<span class="sd">        :return: The ``TransactionEntry`` instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">)</span><span class="o">.</span><span class="fm">__anext__</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">StopAsyncIteration</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TransactionNotFoundException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Transaction identified by </span><span class="si">{</span><span class="n">uuid</span><span class="si">!r}</span><span class="s2"> does not exist.&quot;</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TransactionRepository.select"><a class="viewcode-back" href="../../../../../api/minos.aggregate.transactions.repositories.abc.html#minos.aggregate.transactions.repositories.abc.TransactionRepository.select">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">select</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>

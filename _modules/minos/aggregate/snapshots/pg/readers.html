@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.snapshots.pg.readers &mdash; Minos Microservice Aggregate 0.1.0 documentation</title>
+  <title>minos.aggregate.snapshots.pg.readers &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -229,12 +229,12 @@
 
     <span class="c1"># noinspection PyUnusedLocal</span>
 <div class="viewcode-block" id="PostgreSqlSnapshotReader.get_entry"><a class="viewcode-back" href="../../../../../api/minos.aggregate.snapshots.pg.readers.html#minos.aggregate.snapshots.pg.readers.PostgreSqlSnapshotReader.get_entry">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_entry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aggregate_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">uuid</span><span class="p">:</span> <span class="n">UUID</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SnapshotEntry</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Get an ``SnapshotEntry`` from its identifier.</span>
+        <span class="sd">&quot;&quot;&quot;Get a ``SnapshotEntry`` from its identifier.</span>
 
 <span class="sd">        :param aggregate_name: Class name of the ``Aggregate``.</span>
 <span class="sd">        :param uuid: Identifier of the ``Aggregate``.</span>
 <span class="sd">        :param kwargs: Additional named arguments.</span>
-<span class="sd">        :return: The ``Aggregate`` instance.</span>
+<span class="sd">        :return: The ``SnapshotEntry`` instance.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">try</span><span class="p">:</span>

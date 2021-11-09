@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.snapshots.pg.writers &mdash; Minos Microservice Aggregate 0.1.0 documentation</title>
+  <title>minos.aggregate.snapshots.pg.writers &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -191,6 +191,7 @@
 <span class="kn">from</span> <span class="nn">...exceptions</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">AggregateNotFoundException</span><span class="p">,</span>
     <span class="n">SnapshotRepositoryConflictException</span><span class="p">,</span>
+    <span class="n">TransactionNotFoundException</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span> <span class="nn">...transactions</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">TransactionRepository</span><span class="p">,</span>
@@ -304,8 +305,8 @@
         <span class="n">diff</span> <span class="o">=</span> <span class="n">event_entry</span><span class="o">.</span><span class="n">aggregate_diff</span>
 
         <span class="k">try</span><span class="p">:</span>
-            <span class="n">transaction</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transaction_repository</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">event_entry</span><span class="o">.</span><span class="n">transaction_uuid</span><span class="p">)</span><span class="o">.</span><span class="fm">__anext__</span><span class="p">()</span>
-        <span class="k">except</span> <span class="ne">StopAsyncIteration</span><span class="p">:</span>
+            <span class="n">transaction</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transaction_repository</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">event_entry</span><span class="o">.</span><span class="n">transaction_uuid</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">TransactionNotFoundException</span><span class="p">:</span>
             <span class="n">transaction</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="n">aggregate</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_if_exists</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">transaction</span><span class="o">=</span><span class="n">transaction</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.transactions.entries &mdash; Minos Microservice Aggregate 0.1.0 documentation</title>
+  <title>minos.aggregate.transactions.entries &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -445,7 +445,7 @@
         <span class="n">destination</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_token</span><span class="p">,</span> <span class="s2">&quot;old_value&quot;</span><span class="p">,</span> <span class="n">Token</span><span class="o">.</span><span class="n">MISSING</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">destination</span> <span class="o">==</span> <span class="n">Token</span><span class="o">.</span><span class="n">MISSING</span><span class="p">:</span>
-            <span class="n">destination</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transaction_repository</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">destination_uuid</span><span class="p">)</span><span class="o">.</span><span class="fm">__anext__</span><span class="p">()</span>
+            <span class="n">destination</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transaction_repository</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">destination_uuid</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">destination</span>
 

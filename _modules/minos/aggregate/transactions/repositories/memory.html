@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.transactions.repositories.memory &mdash; Minos Microservice Aggregate 0.1.0 documentation</title>
+  <title>minos.aggregate.transactions.repositories.memory &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -199,10 +199,10 @@
         <span class="k">if</span> <span class="n">transaction</span><span class="o">.</span><span class="n">uuid</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_storage</span><span class="p">:</span>
             <span class="n">status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_storage</span><span class="p">[</span><span class="n">transaction</span><span class="o">.</span><span class="n">uuid</span><span class="p">]</span><span class="o">.</span><span class="n">status</span>
             <span class="k">if</span> <span class="p">(</span>
-                <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">PENDING</span> <span class="ow">and</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">RESERVING</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">REJECTED</span><span class="p">))</span>
+                <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">PENDING</span> <span class="ow">and</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">PENDING</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">RESERVING</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">REJECTED</span><span class="p">))</span>
                 <span class="ow">or</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">RESERVING</span> <span class="ow">and</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">RESERVED</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">REJECTED</span><span class="p">))</span>
                 <span class="ow">or</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">RESERVED</span> <span class="ow">and</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">COMMITTING</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">REJECTED</span><span class="p">))</span>
-                <span class="ow">or</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">COMMITTING</span> <span class="ow">and</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">COMMITTED</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">REJECTED</span><span class="p">))</span>
+                <span class="ow">or</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">COMMITTING</span> <span class="ow">and</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">COMMITTED</span><span class="p">,))</span>
                 <span class="ow">or</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">COMMITTED</span><span class="p">)</span>
                 <span class="ow">or</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">REJECTED</span><span class="p">)</span>
             <span class="p">):</span>

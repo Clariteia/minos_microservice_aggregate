@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.events.repositories.pg &mdash; Minos Microservice Aggregate 0.1.0 documentation</title>
+  <title>minos.aggregate.events.repositories.pg &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -240,7 +240,7 @@
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">_build_query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">:</span> <span class="n">EventEntry</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Composable</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">UUID</span><span class="p">]]:</span>
         <span class="k">if</span> <span class="n">entry</span><span class="o">.</span><span class="n">transaction_uuid</span> <span class="o">!=</span> <span class="n">NULL_UUID</span><span class="p">:</span>
-            <span class="n">transaction</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transaction_repository</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">entry</span><span class="o">.</span><span class="n">transaction_uuid</span><span class="p">)</span><span class="o">.</span><span class="fm">__anext__</span><span class="p">()</span>
+            <span class="n">transaction</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transaction_repository</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">entry</span><span class="o">.</span><span class="n">transaction_uuid</span><span class="p">)</span>
             <span class="n">transaction_uuids</span> <span class="o">=</span> <span class="k">await</span> <span class="n">transaction</span><span class="o">.</span><span class="n">uuids</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">transaction_uuids</span> <span class="o">=</span> <span class="p">(</span><span class="n">NULL_UUID</span><span class="p">,)</span>

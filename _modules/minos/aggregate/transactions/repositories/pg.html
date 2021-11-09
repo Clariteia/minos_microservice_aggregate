@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.transactions.repositories.pg &mdash; Minos Microservice Aggregate 0.1.0 documentation</title>
+  <title>minos.aggregate.transactions.repositories.pg &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -309,10 +309,10 @@
 <span class="s2">DO</span>
 <span class="s2">   UPDATE SET status = </span><span class="si">%(status)s</span><span class="s2">, event_offset = </span><span class="si">%(event_offset)s</span><span class="s2">, updated_at = NOW()</span>
 <span class="s2">WHERE (aggregate_transaction.destination_uuid = </span><span class="si">%(destination_uuid)s</span><span class="s2">)</span>
-<span class="s2">  AND (NOT (aggregate_transaction.status = &#39;pending&#39; AND </span><span class="si">%(status)s</span><span class="s2"> NOT IN (&#39;reserving&#39;, &#39;rejected&#39;)))</span>
+<span class="s2">  AND (NOT (aggregate_transaction.status = &#39;pending&#39; AND </span><span class="si">%(status)s</span><span class="s2"> NOT IN (&#39;pending&#39;, &#39;reserving&#39;, &#39;rejected&#39;)))</span>
 <span class="s2">  AND (NOT (aggregate_transaction.status = &#39;reserving&#39; AND </span><span class="si">%(status)s</span><span class="s2"> NOT IN (&#39;reserved&#39;, &#39;rejected&#39;)))</span>
 <span class="s2">  AND (NOT (aggregate_transaction.status = &#39;reserved&#39; AND </span><span class="si">%(status)s</span><span class="s2"> NOT IN (&#39;committing&#39;, &#39;rejected&#39;)))</span>
-<span class="s2">  AND (NOT (aggregate_transaction.status = &#39;committing&#39; AND </span><span class="si">%(status)s</span><span class="s2"> NOT IN (&#39;committed&#39;, &#39;rejected&#39;)))</span>
+<span class="s2">  AND (NOT (aggregate_transaction.status = &#39;committing&#39; AND </span><span class="si">%(status)s</span><span class="s2"> NOT IN (&#39;committed&#39;)))</span>
 <span class="s2">  AND (NOT (aggregate_transaction.status = &#39;committed&#39;))</span>
 <span class="s2">  AND (NOT (aggregate_transaction.status = &#39;rejected&#39;))</span>
 <span class="s2">RETURNING updated_at;</span>

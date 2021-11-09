@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.exceptions &mdash; Minos Microservice Aggregate 0.1.0 documentation</title>
+  <title>minos.aggregate.exceptions &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
             
           
@@ -203,6 +203,10 @@
 
 <div class="viewcode-block" id="TransactionRepositoryConflictException"><a class="viewcode-back" href="../../../api/minos.aggregate.exceptions.html#minos.aggregate.exceptions.TransactionRepositoryConflictException">[docs]</a><span class="k">class</span> <span class="nc">TransactionRepositoryConflictException</span><span class="p">(</span><span class="n">TransactionRepositoryException</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Exception to be raised when a transactions has invalid status.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="TransactionNotFoundException"><a class="viewcode-back" href="../../../api/minos.aggregate.exceptions.html#minos.aggregate.exceptions.TransactionNotFoundException">[docs]</a><span class="k">class</span> <span class="nc">TransactionNotFoundException</span><span class="p">(</span><span class="n">TransactionRepositoryException</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Exception to be raised when some transaction is not found on the repository.&quot;&quot;&quot;</span></div>
 
 
 <div class="viewcode-block" id="SnapshotRepositoryException"><a class="viewcode-back" href="../../../api/minos.aggregate.exceptions.html#minos.aggregate.exceptions.SnapshotRepositoryException">[docs]</a><span class="k">class</span> <span class="nc">SnapshotRepositoryException</span><span class="p">(</span><span class="n">AggregateException</span><span class="p">):</span>
