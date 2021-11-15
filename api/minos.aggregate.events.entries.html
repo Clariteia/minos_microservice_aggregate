@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.events.entries module &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
+  <title>minos.aggregate.events.entries module &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.1.1
+                0.2.0
               </div>
             
           
@@ -185,7 +185,7 @@
 <span id="minos-aggregate-events-entries-module"></span><h1>minos.aggregate.events.entries module<a class="headerlink" href="#module-minos.aggregate.events.entries" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="minos.aggregate.events.entries.EventEntry">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.events.entries.</span></span><span class="sig-name descname"><span class="pre">EventEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate_uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">b''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">UUID('00000000-0000-0000-0000-000000000000')</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/entries.html#EventEntry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.events.entries.</span></span><span class="sig-name descname"><span class="pre">EventEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate_uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">b''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">UUID('00000000-0000-0000-0000-000000000000')</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/entries.html#EventEntry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class that represents an entry (or row) on the events repository database which stores the aggregate changes.</p>
 <dl class="py method">
@@ -200,7 +200,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.events.entries.EventEntry.aggregate_cls">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">aggregate_cls</span></span><em class="property"><span class="pre">:</span> <span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Aggregate</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.aggregate_cls" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aggregate_cls</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Aggregate</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.aggregate_cls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load the concrete <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -214,7 +214,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.events.entries.EventEntry.aggregate_diff">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">aggregate_diff</span></span><em class="property"><span class="pre">:</span> <span class="pre">AggregateDiff</span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.aggregate_diff" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aggregate_diff</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">AggregateDiff</span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.aggregate_diff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the stored <code class="docutils literal notranslate"><span class="pre">AggregateDiff</span></code> instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -262,7 +262,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.events.entries.EventEntry.field_diff_container">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">field_diff_container</span></span><em class="property"><span class="pre">:</span> <span class="pre">FieldDiffContainer</span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.field_diff_container" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">field_diff_container</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">FieldDiffContainer</span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.field_diff_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the stored field diff container.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -276,7 +276,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.entries.EventEntry.from_aggregate_diff">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_aggregate_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate_diff</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/entries.html#EventEntry.from_aggregate_diff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.from_aggregate_diff" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_aggregate_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate_diff</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/entries.html#EventEntry.from_aggregate_diff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.from_aggregate_diff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a new instance from an <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -297,7 +297,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.entries.EventEntry.from_another">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_another</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">another</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/entries.html#EventEntry.from_another"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.from_another" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_another</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">another</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/entries.html#EventEntry.from_another"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.from_another" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a new instance from another <code class="docutils literal notranslate"><span class="pre">EventEntry</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

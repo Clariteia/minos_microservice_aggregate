@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.transactions.repositories package &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
+  <title>minos.aggregate.transactions.services module &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="minos.aggregate.transactions.repositories.abc module" href="minos.aggregate.transactions.repositories.abc.html" />
-    <link rel="prev" title="minos.aggregate.transactions package" href="minos.aggregate.transactions.html" /> 
+    <link rel="next" title="minos.aggregate.exceptions module" href="minos.aggregate.exceptions.html" />
+    <link rel="prev" title="minos.aggregate.transactions.entries module" href="minos.aggregate.transactions.entries.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -162,13 +162,13 @@
         
           <li><a href="minos.aggregate.transactions.html">minos.aggregate.transactions package</a> &raquo;</li>
         
-      <li>minos.aggregate.transactions.repositories package</li>
+      <li>minos.aggregate.transactions.services module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/minos.aggregate.transactions.repositories.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/minos.aggregate.transactions.services.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -181,18 +181,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-minos.aggregate.transactions.repositories">
-<span id="minos-aggregate-transactions-repositories-package"></span><h1>minos.aggregate.transactions.repositories package<a class="headerlink" href="#module-minos.aggregate.transactions.repositories" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="minos.aggregate.transactions.repositories.abc.html">minos.aggregate.transactions.repositories.abc module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="minos.aggregate.transactions.repositories.memory.html">minos.aggregate.transactions.repositories.memory module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="minos.aggregate.transactions.repositories.pg.html">minos.aggregate.transactions.repositories.pg module</a></li>
-</ul>
-</div>
-</div>
+  <div class="section" id="module-minos.aggregate.transactions.services">
+<span id="minos-aggregate-transactions-services-module"></span><h1>minos.aggregate.transactions.services module<a class="headerlink" href="#module-minos.aggregate.transactions.services" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="minos.aggregate.transactions.services.TransactionService">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.transactions.services.</span></span><span class="sig-name descname"><span class="pre">TransactionService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_repository=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/transactions/services.html#TransactionService"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.transactions.services.TransactionService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Snapshot Service class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.transactions.services.TransactionService.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_repository=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/transactions/services.html#TransactionService.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.transactions.services.TransactionService.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -201,8 +203,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="minos.aggregate.transactions.repositories.abc.html" class="btn btn-neutral float-right" title="minos.aggregate.transactions.repositories.abc module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="minos.aggregate.transactions.html" class="btn btn-neutral float-left" title="minos.aggregate.transactions package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="minos.aggregate.exceptions.html" class="btn btn-neutral float-right" title="minos.aggregate.exceptions module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="minos.aggregate.transactions.entries.html" class="btn btn-neutral float-left" title="minos.aggregate.transactions.entries module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

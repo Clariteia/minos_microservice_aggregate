@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.models.collections module &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
+  <title>minos.aggregate.models.collections module &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.1.1
+                0.2.0
               </div>
             
           
@@ -185,8 +185,8 @@
 <span id="minos-aggregate-models-collections-module"></span><h1>minos.aggregate.models.collections module<a class="headerlink" href="#module-minos.aggregate.models.collections" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.models.collections.</span></span><span class="sig-name descname"><span class="pre">IncrementalSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/collections.html#IncrementalSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.declarative.abc.DeclarativeModel</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.MutableSet</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">minos.aggregate.models.collections.T</span></code>]</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.models.collections.</span></span><span class="sig-name descname"><span class="pre">IncrementalSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/collections.html#IncrementalSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.declarative.DeclarativeModel</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.MutableSet</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">minos.aggregate.models.collections.T</span></code>]</p>
 <p>Incremental Set class.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.__init__">
@@ -211,7 +211,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.avro_bytes">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">avro_bytes</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_bytes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate bytes representation of the current instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -225,7 +225,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.avro_data">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">avro_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the avro data of the model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -239,12 +239,12 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.avro_schema">
-<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[{'name':</span> <span class="pre">'IncrementalSet',</span> <span class="pre">'namespace':</span> <span class="pre">'minos.aggregate.models.collections.0a23be79-f97e-4ea4-b847-637d329a5e55',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'data',</span> <span class="pre">'type':</span> <span class="pre">{'type':</span> <span class="pre">'array',</span> <span class="pre">'items':</span> <span class="pre">'null',</span> <span class="pre">'logicalType':</span> <span class="pre">'set'}}]}]</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_schema" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[{'name':</span> <span class="pre">'IncrementalSet',</span> <span class="pre">'namespace':</span> <span class="pre">'minos.aggregate.models.collections.6638a1af-f428-4bd6-9467-41f32b39ae43',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'data',</span> <span class="pre">'type':</span> <span class="pre">{'type':</span> <span class="pre">'array',</span> <span class="pre">'items':</span> <span class="pre">'null',</span> <span class="pre">'logicalType':</span> <span class="pre">'set'}}]}]</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_schema" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.avro_str">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">avro_str</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_str</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate bytes representation of the current instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -258,7 +258,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.classname">
-<span class="sig-name descname"><span class="pre">classname</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'minos.aggregate.models.collections.IncrementalSet'</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.classname" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">classname</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'minos.aggregate.models.collections.IncrementalSet'</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.classname" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -269,12 +269,12 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.data">
-<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="pre">:</span> <span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.data" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">set</span><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.data" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.data_cls">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">data_cls</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">type</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.data_cls" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_cls</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">type</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.data_cls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get data class if available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -308,7 +308,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.fields">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="pre">:</span> <span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">minos.common.model.fields.Field</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.fields" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">minos.common.model.fields.Field</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fields getter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -319,7 +319,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.from_avro">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_avro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a new instance from the <code class="docutils literal notranslate"><span class="pre">avro</span></code> schema and data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -339,7 +339,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.from_avro_bytes">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -356,7 +356,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.from_avro_str">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -373,7 +373,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.from_model_type">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_model_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_model_type" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_model_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_model_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a <code class="docutils literal notranslate"><span class="pre">DeclarativeModel</span></code> from a <code class="docutils literal notranslate"><span class="pre">ModelType</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -394,7 +394,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.from_typed_dict">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_typed_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typed_dict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_typed_dict" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_typed_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typed_dict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_typed_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a <code class="docutils literal notranslate"><span class="pre">Model</span></code> from a <code class="docutils literal notranslate"><span class="pre">TypeDict</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -415,7 +415,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.get">
-<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">k</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">d</span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">D[k]</span> <span class="pre">if</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">D,</span> <span class="pre">else</span> <span class="pre">d.</span>&#160; <span class="pre">d</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">None.</span></span></span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.get" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">D[k]</span> <span class="pre">if</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">D,</span> <span class="pre">else</span> <span class="pre">d.</span>&#160; <span class="pre">d</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">None.</span></span></span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -448,7 +448,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.to_avro_bytes">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a bytes representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -465,7 +465,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.to_avro_str">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.to_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.to_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a bytes representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -487,7 +487,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.type_hints_parameters">
-<span class="sig-name descname"><span class="pre">type_hints_parameters</span></span><em class="property"> <span class="pre">=</span> <span class="pre">(~T,)</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.type_hints_parameters" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type_hints_parameters</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(~T,)</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.type_hints_parameters" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -499,8 +499,8 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.models.collections.</span></span><span class="sig-name descname"><span class="pre">IncrementalSetDiff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/collections.html#IncrementalSetDiff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.declarative.abc.DeclarativeModel</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.models.collections.</span></span><span class="sig-name descname"><span class="pre">IncrementalSetDiff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/collections.html#IncrementalSetDiff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.declarative.DeclarativeModel</span></code></p>
 <p>Incremental Set Diff class.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.__init__">
@@ -515,7 +515,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.avro_bytes">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">avro_bytes</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_bytes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate bytes representation of the current instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -529,7 +529,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.avro_data">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">avro_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the avro data of the model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -543,12 +543,12 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.avro_schema">
-<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"> <span class="pre">=</span> <span class="pre">[{'name':</span> <span class="pre">'IncrementalSetDiff',</span> <span class="pre">'namespace':</span> <span class="pre">'minos.aggregate.models.collections.ba904004-b88f-4729-a57f-146e179156b5',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'diffs',</span> <span class="pre">'type':</span> <span class="pre">{'type':</span> <span class="pre">'array',</span> <span class="pre">'items':</span> <span class="pre">{'name':</span> <span class="pre">'SetDiffEntry',</span> <span class="pre">'namespace':</span> <span class="pre">'',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'action',</span> <span class="pre">'type':</span> <span class="pre">'string'},</span> <span class="pre">{'name':</span> <span class="pre">'entity',</span> <span class="pre">'type':</span> <span class="pre">'null'}]}}}]}]</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_schema" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[{'name':</span> <span class="pre">'IncrementalSetDiff',</span> <span class="pre">'namespace':</span> <span class="pre">'minos.aggregate.models.collections.fd1f389d-f875-44ac-ae5b-c05398cc230a',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'diffs',</span> <span class="pre">'type':</span> <span class="pre">{'type':</span> <span class="pre">'array',</span> <span class="pre">'items':</span> <span class="pre">{'name':</span> <span class="pre">'SetDiffEntry',</span> <span class="pre">'namespace':</span> <span class="pre">'',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'action',</span> <span class="pre">'type':</span> <span class="pre">'string'},</span> <span class="pre">{'name':</span> <span class="pre">'entity',</span> <span class="pre">'type':</span> <span class="pre">'null'}]}}}]}]</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_schema" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.avro_str">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">avro_str</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_str</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate bytes representation of the current instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -562,17 +562,17 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.classname">
-<span class="sig-name descname"><span class="pre">classname</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'minos.aggregate.models.collections.IncrementalSetDiff'</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.classname" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">classname</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'minos.aggregate.models.collections.IncrementalSetDiff'</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.classname" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.diffs">
-<span class="sig-name descname"><span class="pre">diffs</span></span><em class="property"><span class="pre">:</span> <span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">IncrementalSetDiffEntry</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.diffs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">diffs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">IncrementalSetDiffEntry</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.diffs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.fields">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="pre">:</span> <span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">minos.common.model.fields.Field</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.fields" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">minos.common.model.fields.Field</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fields getter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -583,7 +583,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.from_avro">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_avro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a new instance from the <code class="docutils literal notranslate"><span class="pre">avro</span></code> schema and data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -603,7 +603,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.from_avro_bytes">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -620,7 +620,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.from_avro_str">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -637,7 +637,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.from_difference">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/collections.html#IncrementalSetDiff.from_difference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_difference" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_fn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/collections.html#IncrementalSetDiff.from_difference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_difference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a new instance from two entity sets.
 :type new: <a class="reference internal" href="#minos.aggregate.models.collections.IncrementalSet" title="minos.aggregate.models.collections.IncrementalSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.collections.IncrementalSet</span></code></a>[~T]
 :param new: The new entity set.
@@ -651,7 +651,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.from_model_type">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_model_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_model_type" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_model_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_model_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a <code class="docutils literal notranslate"><span class="pre">DeclarativeModel</span></code> from a <code class="docutils literal notranslate"><span class="pre">ModelType</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -672,7 +672,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.from_typed_dict">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_typed_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typed_dict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_typed_dict" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_typed_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typed_dict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_typed_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a <code class="docutils literal notranslate"><span class="pre">Model</span></code> from a <code class="docutils literal notranslate"><span class="pre">TypeDict</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -693,7 +693,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.get">
-<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">k</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">d</span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">D[k]</span> <span class="pre">if</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">D,</span> <span class="pre">else</span> <span class="pre">d.</span>&#160; <span class="pre">d</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">None.</span></span></span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.get" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">D[k]</span> <span class="pre">if</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">D,</span> <span class="pre">else</span> <span class="pre">d.</span>&#160; <span class="pre">d</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">None.</span></span></span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -708,7 +708,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.to_avro_bytes">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a bytes representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -725,7 +725,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.to_avro_str">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.to_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.to_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a bytes representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -747,7 +747,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.type_hints_parameters">
-<span class="sig-name descname"><span class="pre">type_hints_parameters</span></span><em class="property"> <span class="pre">=</span> <span class="pre">()</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.type_hints_parameters" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type_hints_parameters</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.type_hints_parameters" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">

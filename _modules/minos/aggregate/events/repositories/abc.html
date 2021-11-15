@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.events.repositories.abc &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
+  <title>minos.aggregate.events.repositories.abc &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.1
+                0.2.0
               </div>
             
           
@@ -194,10 +194,12 @@
 
 <span class="kn">from</span> <span class="nn">minos.common</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">Lock</span><span class="p">,</span>
-    <span class="n">MinosBroker</span><span class="p">,</span>
     <span class="n">MinosPool</span><span class="p">,</span>
     <span class="n">MinosSetup</span><span class="p">,</span>
     <span class="n">NotProvidedException</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">minos.networks</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">EventBroker</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">...exceptions</span> <span class="kn">import</span> <span class="p">(</span>
@@ -229,7 +231,7 @@
 <div class="viewcode-block" id="EventRepository.__init__"><a class="viewcode-back" href="../../../../../api/minos.aggregate.events.repositories.abc.html#minos.aggregate.events.repositories.abc.EventRepository.__init__">[docs]</a>    <span class="nd">@inject</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
-        <span class="n">event_broker</span><span class="p">:</span> <span class="n">MinosBroker</span> <span class="o">=</span> <span class="n">Provide</span><span class="p">[</span><span class="s2">&quot;event_broker&quot;</span><span class="p">],</span>
+        <span class="n">event_broker</span><span class="p">:</span> <span class="n">EventBroker</span> <span class="o">=</span> <span class="n">Provide</span><span class="p">[</span><span class="s2">&quot;event_broker&quot;</span><span class="p">],</span>
         <span class="n">transaction_repository</span><span class="p">:</span> <span class="n">TransactionRepository</span> <span class="o">=</span> <span class="n">Provide</span><span class="p">[</span><span class="s2">&quot;transaction_repository&quot;</span><span class="p">],</span>
         <span class="n">lock_pool</span><span class="p">:</span> <span class="n">MinosPool</span><span class="p">[</span><span class="n">Lock</span><span class="p">]</span> <span class="o">=</span> <span class="n">Provide</span><span class="p">[</span><span class="s2">&quot;lock_pool&quot;</span><span class="p">],</span>
         <span class="o">*</span><span class="n">args</span><span class="p">,</span>

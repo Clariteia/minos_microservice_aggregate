@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.snapshots.entries module &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
+  <title>minos.aggregate.snapshots.entries module &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.1.1
+                0.2.0
               </div>
             
           
@@ -185,7 +185,7 @@
 <span id="minos-aggregate-snapshots-entries-module"></span><h1>minos.aggregate.snapshots.entries module<a class="headerlink" href="#module-minos.aggregate.snapshots.entries" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="minos.aggregate.snapshots.entries.SnapshotEntry">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.snapshots.entries.</span></span><span class="sig-name descname"><span class="pre">SnapshotEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate_uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">UUID('00000000-0000-0000-0000-000000000000')</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/snapshots/entries.html#SnapshotEntry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.snapshots.entries.</span></span><span class="sig-name descname"><span class="pre">SnapshotEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate_uuid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_at</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">UUID('00000000-0000-0000-0000-000000000000')</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/snapshots/entries.html#SnapshotEntry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Minos Snapshot Entry class.</p>
 <p>Is the python object representation of a row in the <code class="docutils literal notranslate"><span class="pre">snapshot</span></code> storage system.</p>
@@ -196,7 +196,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.snapshots.entries.SnapshotEntry.aggregate_cls">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">aggregate_cls</span></span><em class="property"><span class="pre">:</span> <span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Aggregate</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.aggregate_cls" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aggregate_cls</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Aggregate</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.aggregate_cls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load the concrete <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -261,7 +261,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.snapshots.entries.SnapshotEntry.encoded_data">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">encoded_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.encoded_data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoded_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.encoded_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the encoded data if available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -275,7 +275,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.snapshots.entries.SnapshotEntry.encoded_schema">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">encoded_schema</span></span><em class="property"><span class="pre">:</span> <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.encoded_schema" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoded_schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.encoded_schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the encoded schema if available.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -289,7 +289,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.snapshots.entries.SnapshotEntry.from_aggregate">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_aggregate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/snapshots/entries.html#SnapshotEntry.from_aggregate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.from_aggregate" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_aggregate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/snapshots/entries.html#SnapshotEntry.from_aggregate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.from_aggregate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a new instance from an <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -306,7 +306,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.snapshots.entries.SnapshotEntry.from_event_entry">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_event_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/snapshots/entries.html#SnapshotEntry.from_event_entry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.from_event_entry" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_event_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/snapshots/entries.html#SnapshotEntry.from_event_entry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.snapshots.entries.SnapshotEntry.from_event_entry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a new <code class="docutils literal notranslate"><span class="pre">SnapshotEntry</span></code> from a deletion event.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

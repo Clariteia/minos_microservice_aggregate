@@ -23,3 +23,4 @@ Submodules
    minos.aggregate.snapshots.abc
    minos.aggregate.snapshots.entries
    minos.aggregate.snapshots.memory
+   minos.aggregate.snapshots.services

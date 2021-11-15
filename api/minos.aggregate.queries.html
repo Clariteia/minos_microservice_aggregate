@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.queries module &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
+  <title>minos.aggregate.queries module &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.1.1
+                0.2.0
               </div>
             
           
@@ -184,7 +184,7 @@
 <p>minos.common.queries module.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="minos.aggregate.queries.Condition">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.queries.</span></span><span class="sig-name descname"><span class="pre">Condition</span></span><a class="reference internal" href="../_modules/minos/aggregate/queries.html#Condition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.queries.Condition" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.queries.</span></span><span class="sig-name descname"><span class="pre">Condition</span></span><a class="reference internal" href="../_modules/minos/aggregate/queries.html#Condition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.queries.Condition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Condition class.</p>
 <p>This class provides the way to create filtering conditions for <code class="docutils literal notranslate"><span class="pre">Model</span></code> instances based on the following operators:</p>
@@ -226,7 +226,7 @@ collection).</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.queries.Condition.FALSE">
-<span class="sig-name descname"><span class="pre">FALSE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">_FalseCondition()</span></em><a class="headerlink" href="#minos.aggregate.queries.Condition.FALSE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">FALSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">_FalseCondition()</span></em><a class="headerlink" href="#minos.aggregate.queries.Condition.FALSE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -279,14 +279,14 @@ collection).</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.queries.Condition.TRUE">
-<span class="sig-name descname"><span class="pre">TRUE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">_TrueCondition()</span></em><a class="headerlink" href="#minos.aggregate.queries.Condition.TRUE" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TRUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">_TrueCondition()</span></em><a class="headerlink" href="#minos.aggregate.queries.Condition.TRUE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="minos.aggregate.queries.Ordering">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.queries.</span></span><span class="sig-name descname"><span class="pre">Ordering</span></span><a class="reference internal" href="../_modules/minos/aggregate/queries.html#Ordering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.queries.Ordering" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.queries.</span></span><span class="sig-name descname"><span class="pre">Ordering</span></span><a class="reference internal" href="../_modules/minos/aggregate/queries.html#Ordering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.queries.Ordering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Ordering class.</p>
 <p>This class provides the way to define ordering strategies for <code class="docutils literal notranslate"><span class="pre">Model</span></code> instances through the <code class="docutils literal notranslate"><span class="pre">ASC</span></code> and <code class="docutils literal notranslate"><span class="pre">DESC</span></code>
@@ -297,12 +297,12 @@ class methods, which retrieves instances containing the given information.</p>
 </div>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.queries.Ordering.ASC">
-<span class="sig-name descname"><span class="pre">ASC</span></span><em class="property"> <span class="pre">=</span> <span class="pre">functools.partial(&lt;class</span> <span class="pre">'minos.aggregate.queries._Ordering'&gt;,</span> <span class="pre">reverse=False)</span></em><a class="headerlink" href="#minos.aggregate.queries.Ordering.ASC" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ASC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">functools.partial(&lt;class</span> <span class="pre">'minos.aggregate.queries._Ordering'&gt;,</span> <span class="pre">reverse=False)</span></em><a class="headerlink" href="#minos.aggregate.queries.Ordering.ASC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.queries.Ordering.DESC">
-<span class="sig-name descname"><span class="pre">DESC</span></span><em class="property"> <span class="pre">=</span> <span class="pre">functools.partial(&lt;class</span> <span class="pre">'minos.aggregate.queries._Ordering'&gt;,</span> <span class="pre">reverse=True)</span></em><a class="headerlink" href="#minos.aggregate.queries.Ordering.DESC" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DESC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">functools.partial(&lt;class</span> <span class="pre">'minos.aggregate.queries._Ordering'&gt;,</span> <span class="pre">reverse=True)</span></em><a class="headerlink" href="#minos.aggregate.queries.Ordering.DESC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

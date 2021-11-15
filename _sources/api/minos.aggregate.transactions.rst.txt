@@ -22,3 +22,4 @@ Submodules
 
    minos.aggregate.transactions.contextvars
    minos.aggregate.transactions.entries
+   minos.aggregate.transactions.services

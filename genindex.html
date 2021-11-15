@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Index &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
+  <title>Index &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.1.1
+                0.2.0
               </div>
             
           
@@ -271,6 +271,8 @@
 </li>
         <li><a href="api/minos.aggregate.snapshots.pg.writers.html#minos.aggregate.snapshots.pg.writers.PostgreSqlSnapshotWriter.__init__">(minos.aggregate.snapshots.pg.writers.PostgreSqlSnapshotWriter method)</a>
 </li>
+        <li><a href="api/minos.aggregate.snapshots.services.html#minos.aggregate.snapshots.services.SnapshotService.__init__">(minos.aggregate.snapshots.services.SnapshotService method)</a>
+</li>
         <li><a href="api/minos.aggregate.transactions.entries.html#minos.aggregate.transactions.entries.TransactionEntry.__init__">(minos.aggregate.transactions.entries.TransactionEntry method)</a>
 </li>
         <li><a href="api/minos.aggregate.transactions.repositories.abc.html#minos.aggregate.transactions.repositories.abc.TransactionRepository.__init__">(minos.aggregate.transactions.repositories.abc.TransactionRepository method)</a>
@@ -278,6 +280,8 @@
         <li><a href="api/minos.aggregate.transactions.repositories.memory.html#minos.aggregate.transactions.repositories.memory.InMemoryTransactionRepository.__init__">(minos.aggregate.transactions.repositories.memory.InMemoryTransactionRepository method)</a>
 </li>
         <li><a href="api/minos.aggregate.transactions.repositories.pg.html#minos.aggregate.transactions.repositories.pg.PostgreSqlTransactionRepository.__init__">(minos.aggregate.transactions.repositories.pg.PostgreSqlTransactionRepository method)</a>
+</li>
+        <li><a href="api/minos.aggregate.transactions.services.html#minos.aggregate.transactions.services.TransactionService.__init__">(minos.aggregate.transactions.services.TransactionService method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1468,8 +1472,6 @@
         <li><a href="api/minos.aggregate.snapshots.pg.readers.html#module-minos.aggregate.snapshots.pg.readers">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     minos.aggregate.snapshots.pg.writers
 
@@ -1477,6 +1479,15 @@
         <li><a href="api/minos.aggregate.snapshots.pg.writers.html#module-minos.aggregate.snapshots.pg.writers">module</a>
 </li>
       </ul></li>
+      <li>
+    minos.aggregate.snapshots.services
+
+      <ul>
+        <li><a href="api/minos.aggregate.snapshots.services.html#module-minos.aggregate.snapshots.services">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     minos.aggregate.transactions
 
@@ -1524,6 +1535,13 @@
 
       <ul>
         <li><a href="api/minos.aggregate.transactions.repositories.pg.html#module-minos.aggregate.transactions.repositories.pg">module</a>
+</li>
+      </ul></li>
+      <li>
+    minos.aggregate.transactions.services
+
+      <ul>
+        <li><a href="api/minos.aggregate.transactions.services.html#module-minos.aggregate.transactions.services">module</a>
 </li>
       </ul></li>
       <li><a href="api/minos.aggregate.models.diffs.fields.html#minos.aggregate.models.diffs.fields.FieldDiff.model_type">model_type (minos.aggregate.models.diffs.fields.FieldDiff attribute)</a>
@@ -1606,6 +1624,8 @@
 </li>
         <li><a href="api/minos.aggregate.snapshots.pg.writers.html#module-minos.aggregate.snapshots.pg.writers">minos.aggregate.snapshots.pg.writers</a>
 </li>
+        <li><a href="api/minos.aggregate.snapshots.services.html#module-minos.aggregate.snapshots.services">minos.aggregate.snapshots.services</a>
+</li>
         <li><a href="api/minos.aggregate.transactions.html#module-minos.aggregate.transactions">minos.aggregate.transactions</a>
 </li>
         <li><a href="api/minos.aggregate.transactions.contextvars.html#module-minos.aggregate.transactions.contextvars">minos.aggregate.transactions.contextvars</a>
@@ -1619,6 +1639,8 @@
         <li><a href="api/minos.aggregate.transactions.repositories.memory.html#module-minos.aggregate.transactions.repositories.memory">minos.aggregate.transactions.repositories.memory</a>
 </li>
         <li><a href="api/minos.aggregate.transactions.repositories.pg.html#module-minos.aggregate.transactions.repositories.pg">minos.aggregate.transactions.repositories.pg</a>
+</li>
+        <li><a href="api/minos.aggregate.transactions.services.html#module-minos.aggregate.transactions.services">minos.aggregate.transactions.services</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1805,9 +1827,11 @@
 </li>
       <li><a href="api/minos.aggregate.exceptions.html#minos.aggregate.exceptions.SnapshotRepositoryConflictException">SnapshotRepositoryConflictException</a>
 </li>
+      <li><a href="api/minos.aggregate.exceptions.html#minos.aggregate.exceptions.SnapshotRepositoryException">SnapshotRepositoryException</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/minos.aggregate.exceptions.html#minos.aggregate.exceptions.SnapshotRepositoryException">SnapshotRepositoryException</a>
+      <li><a href="api/minos.aggregate.snapshots.services.html#minos.aggregate.snapshots.services.SnapshotService">SnapshotService (class in minos.aggregate.snapshots.services)</a>
 </li>
       <li><a href="api/minos.aggregate.transactions.entries.html#minos.aggregate.transactions.entries.TransactionEntry.status">status (minos.aggregate.transactions.entries.TransactionEntry attribute)</a>
 </li>
@@ -1964,6 +1988,8 @@
       <li><a href="api/minos.aggregate.exceptions.html#minos.aggregate.exceptions.TransactionRepositoryConflictException">TransactionRepositoryConflictException</a>
 </li>
       <li><a href="api/minos.aggregate.exceptions.html#minos.aggregate.exceptions.TransactionRepositoryException">TransactionRepositoryException</a>
+</li>
+      <li><a href="api/minos.aggregate.transactions.services.html#minos.aggregate.transactions.services.TransactionService">TransactionService (class in minos.aggregate.transactions.services)</a>
 </li>
       <li><a href="api/minos.aggregate.transactions.entries.html#minos.aggregate.transactions.entries.TransactionStatus">TransactionStatus (class in minos.aggregate.transactions.entries)</a>
 </li>

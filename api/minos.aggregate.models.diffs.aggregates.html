@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.models.diffs.aggregates module &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
+  <title>minos.aggregate.models.diffs.aggregates module &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.1.1
+                0.2.0
               </div>
             
           
@@ -187,8 +187,8 @@
 <span id="minos-aggregate-models-diffs-aggregates-module"></span><h1>minos.aggregate.models.diffs.aggregates module<a class="headerlink" href="#module-minos.aggregate.models.diffs.aggregates" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.models.diffs.aggregates.</span></span><span class="sig-name descname"><span class="pre">AggregateDiff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/diffs/aggregates.html#AggregateDiff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.declarative.abc.DeclarativeModel</span></code></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.models.diffs.aggregates.</span></span><span class="sig-name descname"><span class="pre">AggregateDiff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/diffs/aggregates.html#AggregateDiff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.declarative.DeclarativeModel</span></code></p>
 <p>Aggregate Diff class.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.__init__">
@@ -203,12 +203,12 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.action">
-<span class="sig-name descname"><span class="pre">action</span></span><em class="property"><span class="pre">:</span> <span class="pre">Action</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.action" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">action</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Action</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.action" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.avro_bytes">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">avro_bytes</span></span><em class="property"><span class="pre">:</span> <span class="pre">bytes</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_bytes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bytes</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate bytes representation of the current instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -222,7 +222,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.avro_data">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">avro_data</span></span><em class="property"><span class="pre">:</span> <span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.avro_data" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.avro_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the avro data of the model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -241,7 +241,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.avro_str">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">avro_str</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_str</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate bytes representation of the current instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -255,12 +255,12 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.classname">
-<span class="sig-name descname"><span class="pre">classname</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'minos.aggregate.models.diffs.aggregates.AggregateDiff'</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.classname" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">classname</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'minos.aggregate.models.diffs.aggregates.AggregateDiff'</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.classname" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.created_at">
-<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="pre">:</span> <span class="pre">datetime</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.created_at" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">created_at</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.created_at" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -279,7 +279,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.fields">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="pre">:</span> <span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">minos.common.model.fields.Field</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.fields" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">minos.common.model.fields.Field</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fields getter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -290,12 +290,12 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.fields_diff">
-<span class="sig-name descname"><span class="pre">fields_diff</span></span><em class="property"><span class="pre">:</span> <span class="pre">FieldDiffContainer</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.fields_diff" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fields_diff</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">FieldDiffContainer</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.fields_diff" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_aggregate">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_aggregate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Action.CREATE</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/diffs/aggregates.html#AggregateDiff.from_aggregate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_aggregate" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_aggregate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Action.CREATE</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/diffs/aggregates.html#AggregateDiff.from_aggregate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_aggregate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an <code class="docutils literal notranslate"><span class="pre">AggregateDiff</span></code> from an <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> (considering all fields as differences).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -315,7 +315,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_avro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a new instance from the <code class="docutils literal notranslate"><span class="pre">avro</span></code> schema and data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -335,7 +335,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_bytes">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -352,7 +352,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_str">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -369,7 +369,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_deleted_aggregate">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_deleted_aggregate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Action.DELETE</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/diffs/aggregates.html#AggregateDiff.from_deleted_aggregate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_deleted_aggregate" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_deleted_aggregate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Action.DELETE</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/diffs/aggregates.html#AggregateDiff.from_deleted_aggregate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_deleted_aggregate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an <code class="docutils literal notranslate"><span class="pre">AggregateDiff</span></code> from an <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> (considering all fields as differences).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -389,7 +389,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_difference">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Action.UPDATE</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/diffs/aggregates.html#AggregateDiff.from_difference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_difference" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">Action.UPDATE</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/diffs/aggregates.html#AggregateDiff.from_difference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_difference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build an <code class="docutils literal notranslate"><span class="pre">AggregateDiff</span></code> instance from the difference of two aggregates.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -410,7 +410,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_model_type">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_model_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_model_type" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_model_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_model_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a <code class="docutils literal notranslate"><span class="pre">DeclarativeModel</span></code> from a <code class="docutils literal notranslate"><span class="pre">ModelType</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -431,7 +431,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_typed_dict">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_typed_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typed_dict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_typed_dict" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_typed_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typed_dict</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_typed_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a <code class="docutils literal notranslate"><span class="pre">Model</span></code> from a <code class="docutils literal notranslate"><span class="pre">TypeDict</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -452,7 +452,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.get">
-<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">k</span></em><span class="optional">[</span>, <em class="sig-param"><span class="pre">d</span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">D[k]</span> <span class="pre">if</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">D,</span> <span class="pre">else</span> <span class="pre">d.</span>&#160; <span class="pre">d</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">None.</span></span></span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.get" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">D[k]</span> <span class="pre">if</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">D,</span> <span class="pre">else</span> <span class="pre">d.</span>&#160; <span class="pre">d</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">None.</span></span></span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -506,12 +506,12 @@ returned as value instances.</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.name" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.name" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.simplified_name">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">simplified_name</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.simplified_name" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">simplified_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.simplified_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the Aggregate’s simplified name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -525,7 +525,7 @@ returned as value instances.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.to_avro_bytes">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a bytes representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -542,7 +542,7 @@ returned as value instances.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.to_avro_str">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.to_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.to_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a bytes representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -564,12 +564,12 @@ returned as value instances.</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.type_hints_parameters">
-<span class="sig-name descname"><span class="pre">type_hints_parameters</span></span><em class="property"> <span class="pre">=</span> <span class="pre">()</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.type_hints_parameters" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">type_hints_parameters</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.type_hints_parameters" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.uuid">
-<span class="sig-name descname"><span class="pre">uuid</span></span><em class="property"><span class="pre">:</span> <span class="pre">UUID</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.uuid" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">uuid</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">UUID</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.uuid" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -579,7 +579,7 @@ returned as value instances.</p></li>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.version">
-<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.version" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.version" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

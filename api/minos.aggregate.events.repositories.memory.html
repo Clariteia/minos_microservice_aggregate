@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.events.repositories.memory module &mdash; Minos Microservice Aggregate 0.1.1 documentation</title>
+  <title>minos.aggregate.events.repositories.memory module &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.1.1
+                0.2.0
               </div>
             
           
@@ -187,7 +187,7 @@
 <span id="minos-aggregate-events-repositories-memory-module"></span><h1>minos.aggregate.events.repositories.memory module<a class="headerlink" href="#module-minos.aggregate.events.repositories.memory" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.events.repositories.memory.</span></span><span class="sig-name descname"><span class="pre">InMemoryEventRepository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/repositories/memory.html#InMemoryEventRepository"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.events.repositories.memory.</span></span><span class="sig-name descname"><span class="pre">InMemoryEventRepository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/repositories/memory.html#InMemoryEventRepository"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="minos.aggregate.events.repositories.abc.html#minos.aggregate.events.repositories.abc.EventRepository" title="minos.aggregate.events.repositories.abc.EventRepository"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.events.repositories.abc.EventRepository</span></code></a></p>
 <p>Memory-based implementation of the event repository class in <code class="docutils literal notranslate"><span class="pre">minos</span></code>.</p>
 <dl class="py method">
@@ -197,7 +197,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.already_destroyed">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">already_destroyed</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.already_destroyed" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">already_destroyed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.already_destroyed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Already Destroy getter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -211,7 +211,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.already_setup">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">already_setup</span></span><em class="property"><span class="pre">:</span> <span class="pre">bool</span></em><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.already_setup" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">already_setup</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.already_setup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Already Setup getter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -225,7 +225,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.create">
-<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.create" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store new creation entry into the repository.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -242,7 +242,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.delete">
-<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.delete" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store new deletion entry into the repository.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -259,7 +259,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.destroy">
-<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.destroy" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Destroy miscellaneous repository things.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -273,7 +273,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.from_config">
-<em class="property"><span class="pre">classmethod</span> </em><span class="sig-name descname"><span class="pre">from_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.from_config" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.from_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a new instance from config.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -293,7 +293,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.offset">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">offset</span></span><em class="property"><span class="pre">:</span> <span class="pre">Awaitable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.offset" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">offset</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Awaitable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.offset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current repository offset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -307,7 +307,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.select">
-<span class="sig-name descname"><span class="pre">select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_lt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_gt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_le</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_ge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_lt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_gt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_le</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_ge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid_ne</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.select" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aggregate_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggregate_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_lt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_gt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_le</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_ge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_lt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_gt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_le</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_ge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid_ne</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.select" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform a selection query of entries stored in to the repository.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -340,7 +340,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.setup">
-<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.setup" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.setup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Setup miscellaneous repository things.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -354,7 +354,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.submit">
-<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.submit" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.submit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store new entry into the repository.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -391,7 +391,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.update">
-<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.update" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store new update entry into the repository.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -408,7 +408,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.memory.InMemoryEventRepository.validate">
-<em class="property"><span class="pre">async</span> </em><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid_ne</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.validate" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_uuid_ne</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.events.repositories.memory.InMemoryEventRepository.validate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if it is able to submit the given entry.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
