@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.transactions.repositories.abc &mdash; Minos Microservice Aggregate 0.2.0 documentation</title>
+  <title>minos.aggregate.transactions.repositories.abc &mdash; Minos Microservice Aggregate 0.2.1 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.2.0
+                0.2.1
               </div>
             
           
@@ -166,6 +166,9 @@
     <span class="n">ABC</span><span class="p">,</span>
     <span class="n">abstractmethod</span><span class="p">,</span>
 <span class="p">)</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">datetime</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">AsyncIterator</span><span class="p">,</span>
     <span class="n">Optional</span><span class="p">,</span>
@@ -247,6 +250,11 @@
         <span class="n">event_offset_gt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">event_offset_le</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">event_offset_ge</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">updated_at</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">updated_at_lt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">updated_at_gt</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">updated_at_le</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">updated_at_ge</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIterator</span><span class="p">[</span><span class="n">TransactionEntry</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Get a transaction from the repository.</span>
@@ -262,6 +270,11 @@
 <span class="sd">        :param event_offset_gt: Event Offset greater than the given value</span>
 <span class="sd">        :param event_offset_le: Event Offset lower or equal to the given value</span>
 <span class="sd">        :param event_offset_ge: Event Offset greater or equal to the given value</span>
+<span class="sd">        :param updated_at: Updated at equal to the given value.</span>
+<span class="sd">        :param updated_at_lt: Updated at lower than the given value.</span>
+<span class="sd">        :param updated_at_gt: Updated at greater than the given value.</span>
+<span class="sd">        :param updated_at_le: Updated at lower or equal to the given value.</span>
+<span class="sd">        :param updated_at_ge: Updated at greater or equal to the given value.</span>
 <span class="sd">        :param kwargs: Additional named arguments.</span>
 <span class="sd">        :return: An asynchronous iterator.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -277,6 +290,11 @@
             <span class="n">event_offset_gt</span><span class="o">=</span><span class="n">event_offset_gt</span><span class="p">,</span>
             <span class="n">event_offset_le</span><span class="o">=</span><span class="n">event_offset_le</span><span class="p">,</span>
             <span class="n">event_offset_ge</span><span class="o">=</span><span class="n">event_offset_ge</span><span class="p">,</span>
+            <span class="n">updated_at</span><span class="o">=</span><span class="n">updated_at</span><span class="p">,</span>
+            <span class="n">updated_at_lt</span><span class="o">=</span><span class="n">updated_at_lt</span><span class="p">,</span>
+            <span class="n">updated_at_gt</span><span class="o">=</span><span class="n">updated_at_gt</span><span class="p">,</span>
+            <span class="n">updated_at_le</span><span class="o">=</span><span class="n">updated_at_le</span><span class="p">,</span>
+            <span class="n">updated_at_ge</span><span class="o">=</span><span class="n">updated_at_ge</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="c1"># noinspection PyTypeChecker</span>
