@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.transactions.services &mdash; Minos Microservice Aggregate 0.2.1 documentation</title>
+  <title>minos.aggregate.transactions.services &mdash; Minos Microservice Aggregate 0.2.2 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.2.1
+                0.2.2
               </div>
             
           
@@ -186,6 +186,7 @@
 <span class="kn">from</span> <span class="nn">..exceptions</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">EventRepositoryConflictException</span><span class="p">,</span>
     <span class="n">TransactionNotFoundException</span><span class="p">,</span>
+    <span class="n">TransactionRepositoryConflictException</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span> <span class="nn">.entries</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">TransactionStatus</span><span class="p">,</span>
@@ -238,7 +239,13 @@
         <span class="k">except</span> <span class="n">TransactionNotFoundException</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">ResponseException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The transaction identified by </span><span class="si">{</span><span class="n">uuid</span><span class="si">!r}</span><span class="s2"> does not exist.&quot;</span><span class="p">)</span>
 
-        <span class="k">await</span> <span class="n">transaction</span><span class="o">.</span><span class="n">reject</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">transaction</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">TransactionStatus</span><span class="o">.</span><span class="n">REJECTED</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">transaction</span><span class="o">.</span><span class="n">reject</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">TransactionRepositoryConflictException</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ResponseException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">exc</span><span class="si">!s}</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">__commit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">uuid</span> <span class="o">=</span> <span class="k">await</span> <span class="n">request</span><span class="o">.</span><span class="n">content</span><span class="p">()</span>
@@ -248,7 +255,10 @@
         <span class="k">except</span> <span class="n">TransactionNotFoundException</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">ResponseException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The transaction identified by </span><span class="si">{</span><span class="n">uuid</span><span class="si">!r}</span><span class="s2"> does not exist.&quot;</span><span class="p">)</span>
 
-        <span class="k">await</span> <span class="n">transaction</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">transaction</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">except</span> <span class="n">TransactionRepositoryConflictException</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ResponseException</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">exc</span><span class="si">!s}</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="c1"># noinspection PyUnusedLocal</span>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">__reject_blocked__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -256,7 +266,10 @@
         <span class="n">updated_at_lt</span> <span class="o">=</span> <span class="n">current_datetime</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">async</span> <span class="k">for</span> <span class="n">transaction</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">transaction_repository</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">status_in</span><span class="o">=</span><span class="n">status_in</span><span class="p">,</span> <span class="n">updated_at_lt</span><span class="o">=</span><span class="n">updated_at_lt</span><span class="p">):</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rejecting </span><span class="si">{</span><span class="n">transaction</span><span class="o">.</span><span class="n">uuid</span><span class="si">!r}</span><span class="s2"> transaction as it has been reserved for a long time...&quot;</span><span class="p">)</span>
-            <span class="k">await</span> <span class="n">transaction</span><span class="o">.</span><span class="n">reject</span><span class="p">()</span></div>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">transaction</span><span class="o">.</span><span class="n">reject</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">TransactionRepositoryConflictException</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Raised an exception while trying to reject a blocked transaction: </span><span class="si">{</span><span class="n">exc</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 </pre></div>
 
            </div>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.events.repositories.abc module &mdash; Minos Microservice Aggregate 0.2.1 documentation</title>
+  <title>minos.aggregate.events.repositories.abc module &mdash; Minos Microservice Aggregate 0.2.2 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.2.1
+                0.2.2
               </div>
             
           
@@ -187,12 +187,12 @@
 <span id="minos-aggregate-events-repositories-abc-module"></span><h1>minos.aggregate.events.repositories.abc module<a class="headerlink" href="#module-minos.aggregate.events.repositories.abc" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.abc.EventRepository">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.events.repositories.abc.</span></span><span class="sig-name descname"><span class="pre">EventRepository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_broker=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_repository=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock_pool=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/repositories/abc.html#EventRepository"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.repositories.abc.EventRepository" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.events.repositories.abc.</span></span><span class="sig-name descname"><span class="pre">EventRepository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">broker_publisher=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_repository=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock_pool=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/repositories/abc.html#EventRepository"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.repositories.abc.EventRepository" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.setup.MinosSetup</span></code></p>
 <p>Base event repository class in <code class="docutils literal notranslate"><span class="pre">minos</span></code>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.events.repositories.abc.EventRepository.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_broker=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_repository=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock_pool=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/repositories/abc.html#EventRepository.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.repositories.abc.EventRepository.__init__" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">broker_publisher=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transaction_repository=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock_pool=&lt;dependency_injector.wiring.Provide</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/events/repositories/abc.html#EventRepository.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.events.repositories.abc.EventRepository.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
