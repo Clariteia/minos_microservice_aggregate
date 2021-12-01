@@ -13,6 +13,7 @@ from minos.aggregate import (
     EventEntry,
     FieldDiff,
     FieldDiffContainer,
+    ModelRef,
     Ordering,
     PostgreSqlSnapshotReader,
     PostgreSqlSnapshotSetup,
@@ -276,6 +277,17 @@ class TestPostgreSqlSnapshotReader(MinosTestCase, PostgresAsyncTestCase):
     async def test_get(self):
 
         observed = await self.reader.get("tests.utils.Car", self.uuid_2)
+
+        expected = Car(
+            3, "blue", uuid=self.uuid_2, version=2, created_at=observed.created_at, updated_at=observed.updated_at,
+        )
+        self.assertEqual(expected, observed)
+
+    async def test_get_from_model_ref(self):
+
+        ref = ModelRef(self.uuid_2)
+
+        observed = await self.reader.get("tests.utils.Car", ref)
 
         expected = Car(
             3, "blue", uuid=self.uuid_2, version=2, created_at=observed.created_at, updated_at=observed.updated_at,
