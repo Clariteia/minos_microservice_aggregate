@@ -56,7 +56,7 @@ class TestSnapshotService(MinosTestCase, PostgresAsyncTestCase):
         self.assertEqual(expected, await response.content())
 
     async def test_get_aggregate_raises(self):
-        with patch("tests.utils.InMemoryRequest.content", side_effect=ValueError):
+        with patch("minos.networks.InMemoryRequest.content", side_effect=ValueError):
             with self.assertRaises(ResponseException):
                 await self.service.__get_one__(InMemoryRequest(None))
         with patch("minos.aggregate.Aggregate.get", side_effect=ValueError):
@@ -73,7 +73,7 @@ class TestSnapshotService(MinosTestCase, PostgresAsyncTestCase):
         self.assertEqual(expected, await response.content())
 
     async def test_get_aggregates_raises(self):
-        with patch("tests.utils.InMemoryRequest.content", side_effect=ValueError):
+        with patch("minos.networks.InMemoryRequest.content", side_effect=ValueError):
             with self.assertRaises(ResponseException):
                 await self.service.__get_many__(InMemoryRequest(None))
         with patch("minos.aggregate.Aggregate.get", side_effect=ValueError):

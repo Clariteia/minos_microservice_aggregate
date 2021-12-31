@@ -61,7 +61,7 @@ class FieldRef(Field):
         :param _target: An optional pre-encoded data.
         :return: The encoded data of the instance.
         """
-        if SUBMITTING_EVENT_CONTEXT_VAR.get() and not isinstance(_target, UUID):
+        if SUBMITTING_EVENT_CONTEXT_VAR.get() and not isinstance(self.value, UUID):
             _target = self.value.uuid
         return super().encode_data(encoder, _target)
 
