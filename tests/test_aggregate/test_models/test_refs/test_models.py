@@ -204,9 +204,9 @@ class TestModelRef(MinosTestCase):
 
     @unittest.skip("Failing test... FIXME!")
     def test_avro_model(self):
-        mt_bar = ModelType.build("Bar", {"uuid": UUID, "age": int})
-        value = mt_bar(uuid=uuid4(), age=1)
-        base = ModelRef(value)
+        # noinspection PyPep8Naming
+        Bar = ModelType.build("Bar", {"uuid": UUID, "version": int})
+        base = ModelRef(Bar(uuid4(), 1))
         self.assertEqual(base, ModelRef.from_avro_bytes(base.avro_bytes))
 
     @unittest.skip("Failing test... FIXME!")
