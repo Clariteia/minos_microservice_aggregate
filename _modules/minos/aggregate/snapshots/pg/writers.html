@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.snapshots.pg.writers &mdash; Minos Microservice Aggregate 0.2.2 documentation</title>
+  <title>minos.aggregate.snapshots.pg.writers &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.2.2
+                0.2.3
               </div>
             
           
@@ -242,7 +242,7 @@
         <span class="sd">&quot;&quot;&quot;Check if the snapshot has the latest version of an ``Aggregate`` instance.</span>
 
 <span class="sd">        :param aggregate_name: Class name of the ``Aggregate`` to be checked.</span>
-<span class="sd">        :return: ``True`` if has the latest version for the identifier or ``False`` otherwise.</span>
+<span class="sd">        :return: ``True`` if it has the latest version for the identifier or ``False`` otherwise.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">offset</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_load_offset</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="n">iterable</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_event_repository</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">id_gt</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">aggregate_name</span><span class="o">=</span><span class="n">aggregate_name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>

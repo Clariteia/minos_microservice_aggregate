@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.snapshots.pg.abc &mdash; Minos Microservice Aggregate 0.2.2 documentation</title>
+  <title>minos.aggregate.snapshots.pg.abc &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.2.2
+                0.2.3
               </div>
             
           
@@ -185,7 +185,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">config</span><span class="o">.</span><span class="n">snapshot</span><span class="o">.</span><span class="n">_asdict</span><span class="p">(),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">async</span> <span class="k">def</span> <span class="nf">_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">submit_query</span><span class="p">(</span><span class="s1">&#39;CREATE EXTENSION IF NOT EXISTS &quot;uuid-ossp&quot;;&#39;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">submit_query</span><span class="p">(</span><span class="s1">&#39;CREATE EXTENSION IF NOT EXISTS &quot;uuid-ossp&quot;;&#39;</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="s2">&quot;uuid-ossp&quot;</span><span class="p">)</span>
         <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">submit_query</span><span class="p">(</span><span class="n">_CREATE_TABLE_QUERY</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="s2">&quot;snapshot&quot;</span><span class="p">)</span>
         <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">submit_query</span><span class="p">(</span><span class="n">_CREATE_OFFSET_TABLE_QUERY</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="s2">&quot;snapshot_aux_offset&quot;</span><span class="p">)</span></div>
 

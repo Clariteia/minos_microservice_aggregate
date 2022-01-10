@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.models.refs.models module &mdash; Minos Microservice Aggregate 0.2.2 documentation</title>
+  <title>minos.aggregate.models.refs.models module &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.2.2
+                0.2.3
               </div>
             
           
@@ -248,6 +248,91 @@
 <span class="sig-name descname"><span class="pre">classname</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'minos.aggregate.models.refs.models.AggregateRef'</span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.classname" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.decode_data">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.decode_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode data with the given decoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>decoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.DataDecoder</span></code>) – The decoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The data to be decoded.</p></li>
+<li><p><strong>type</strong> – The data type.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A decoded instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.decode_schema">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.decode_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode schema with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>decoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.SchemaDecoder</span></code>) – The decoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The schema to be decoded.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The decoded schema as a type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.encode_data">
+<span class="sig-name descname"><span class="pre">encode_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.encode_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode data with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.DataEncoder</span></code>) – The encoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – An optional pre-encoded data.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The encoded data of the instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.encode_schema">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encode_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.encode_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode schema with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.SchemaEncoder</span></code>) – The encoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – An optional pre-encoded schema.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The encoded schema of the instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.fields">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">minos.common.model.fields.Field</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.fields" title="Permalink to this definition">¶</a></dt>
@@ -266,8 +351,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>schema</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>]]]) – The avro schema of the model.</p></li>
-<li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>]) – The avro data of the model.</p></li>
+<li><p><strong>schema</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The avro schema of the model.</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The avro data of the model.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -281,11 +366,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.from_avro_bytes">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – A bytes data.</p>
+<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – A <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the model.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]</p>
@@ -298,11 +383,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.from_avro_str">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.from_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.from_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – A bytes data.</p>
+<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – A <code class="docutils literal notranslate"><span class="pre">str</span></code> representation of the model.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]</p>
@@ -373,7 +458,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.to_avro_bytes">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a bytes representation of the given object instances.</p>
+<dd><p>Create a <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>models</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]) – A sequence of minos models.</p>
@@ -390,7 +475,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.to_avro_str">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.to_avro_str" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a bytes representation of the given object instances.</p>
+<dd><p>Build the avro string representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>models</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]) – A sequence of minos models.</p>
@@ -423,133 +508,6 @@
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.AggregateRef.version">
 <span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.AggregateRef.version" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">minos.aggregate.models.refs.models.</span></span><span class="sig-name descname"><span class="pre">FieldRef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value=&lt;class</span> <span class="pre">'minos.common.model.types.constants.MissingSentinel'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parser=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validator=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/refs/models.html#FieldRef"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.fields.Field</span></code></p>
-<p>Ref Field class.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value=&lt;class</span> <span class="pre">'minos.common.model.types.constants.MissingSentinel'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parser=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validator=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.avro_data">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.avro_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the avro data of the model.</p>
-<p>If submitting is active then simply the identifier is used, otherwise the complete value is used.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A dictionary object.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.avro_schema">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">typing.Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.avro_schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the avro schema of the field.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>]</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A dictionary object.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.from_avro">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.from_avro" title="Permalink to this definition">¶</a></dt>
-<dd><p>Build a <code class="docutils literal notranslate"><span class="pre">Field</span></code> instance from the avro information.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>schema</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – Field’s schema.</p></li>
-<li><p><strong>value</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – Field’s value.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.fields.Field</span></code></p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A <code class="docutils literal notranslate"><span class="pre">Field</span></code> instance.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name getter.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.parser">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parser</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.parser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parser getter.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Callable</span></code>[[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>], <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.real_type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">real_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#minos.aggregate.models.refs.models.FieldRef.type" title="minos.aggregate.models.refs.models.FieldRef.type"><span class="pre">type</span></a></em><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.real_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Real Type getter.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#minos.aggregate.models.refs.models.FieldRef.type" title="minos.aggregate.models.refs.models.FieldRef.type"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#minos.aggregate.models.refs.models.FieldRef.type" title="minos.aggregate.models.refs.models.FieldRef.type"><span class="pre">type</span></a></em><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type getter.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#minos.aggregate.models.refs.models.FieldRef.type" title="minos.aggregate.models.refs.models.FieldRef.type"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.validator">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validator</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.validator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parser getter.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Optional</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Callable</span></code>[[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>], <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.FieldRef.value">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.FieldRef.value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Value getter.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
-</dd>
-</dl>
-</dd></dl>
 
 </dd></dl>
 
@@ -599,7 +557,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.avro_schema">
-<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[{'name':</span> <span class="pre">'ModelRef',</span> <span class="pre">'namespace':</span> <span class="pre">'minos.aggregate.models.refs.models.9e2a0a9e-59d4-4137-8f4a-ba4e0f2bdcac',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'data',</span> <span class="pre">'type':</span> <span class="pre">['null',</span> <span class="pre">{'type':</span> <span class="pre">'string',</span> <span class="pre">'logicalType':</span> <span class="pre">'uuid'}]}]}]</span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.avro_schema" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'logicalType':</span> <span class="pre">'uuid',</span> <span class="pre">'type':</span> <span class="pre">'string'}</span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.avro_schema" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -665,6 +623,87 @@
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.decode_data">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/refs/models.html#ModelRef.decode_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.decode_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode data with the given decoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>decoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.DataDecoder</span></code>) – The decoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The data to be decoded.</p></li>
+<li><p><strong>type</strong> – The data type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#minos.aggregate.models.refs.models.ModelRef" title="minos.aggregate.models.refs.models.ModelRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.refs.models.ModelRef</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A decoded instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.decode_schema">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/refs/models.html#ModelRef.decode_schema"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.decode_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode schema with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>decoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.SchemaDecoder</span></code>) – The decoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The schema to be decoded.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.types.model_types.ModelType</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The decoded schema as a type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.encode_data">
+<span class="sig-name descname"><span class="pre">encode_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/refs/models.html#ModelRef.encode_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.encode_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode data with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.DataEncoder</span></code>) – The encoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – An optional pre-encoded data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The encoded data of the instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.encode_schema">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encode_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/refs/models.html#ModelRef.encode_schema"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.encode_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode schema with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.SchemaEncoder</span></code>) – The encoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – An optional pre-encoded schema.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The encoded schema of the instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.fields">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">minos.common.model.fields.Field</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.fields" title="Permalink to this definition">¶</a></dt>
@@ -683,8 +722,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>schema</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>]]]) – The avro schema of the model.</p></li>
-<li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>]) – The avro data of the model.</p></li>
+<li><p><strong>schema</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The avro schema of the model.</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The avro data of the model.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -698,11 +737,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.from_avro_bytes">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>raw</strong> (<a class="reference internal" href="#minos.aggregate.models.refs.models.ModelRef.bytes" title="minos.aggregate.models.refs.models.ModelRef.bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>) – A bytes data.</p>
+<dd class="field-odd"><p><strong>raw</strong> (<a class="reference internal" href="#minos.aggregate.models.refs.models.ModelRef.bytes" title="minos.aggregate.models.refs.models.ModelRef.bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a>) – A <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the model.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]</p>
@@ -715,11 +754,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.from_avro_str">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.from_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.from_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – A bytes data.</p>
+<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – A <code class="docutils literal notranslate"><span class="pre">str</span></code> representation of the model.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]</p>
@@ -882,7 +921,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.to_avro_bytes">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a bytes representation of the given object instances.</p>
+<dd><p>Create a <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>models</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]) – A sequence of minos models.</p>
@@ -899,7 +938,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.refs.models.ModelRef.to_avro_str">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.refs.models.ModelRef.to_avro_str" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a bytes representation of the given object instances.</p>
+<dd><p>Build the avro string representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>models</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]) – A sequence of minos models.</p>

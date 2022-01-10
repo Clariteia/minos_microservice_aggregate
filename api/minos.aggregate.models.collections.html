@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.models.collections module &mdash; Minos Microservice Aggregate 0.2.2 documentation</title>
+  <title>minos.aggregate.models.collections module &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.2.2
+                0.2.3
               </div>
             
           
@@ -239,7 +239,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.avro_schema">
-<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[{'name':</span> <span class="pre">'IncrementalSet',</span> <span class="pre">'namespace':</span> <span class="pre">'minos.aggregate.models.collections.3188eff4-3566-4c19-bf8f-7de20704f919',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'data',</span> <span class="pre">'type':</span> <span class="pre">{'type':</span> <span class="pre">'array',</span> <span class="pre">'items':</span> <span class="pre">'null',</span> <span class="pre">'logicalType':</span> <span class="pre">'set'}}]}]</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_schema" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[{'name':</span> <span class="pre">'IncrementalSet',</span> <span class="pre">'namespace':</span> <span class="pre">'minos.aggregate.models.collections.2dc1bca1-8f2c-4293-9282-7c988677962f',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'data',</span> <span class="pre">'type':</span> <span class="pre">{'type':</span> <span class="pre">'array',</span> <span class="pre">'items':</span> <span class="pre">'null',</span> <span class="pre">'logicalType':</span> <span class="pre">'set'}}]}]</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.avro_schema" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -287,6 +287,49 @@
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.decode_data">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.decode_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode data with the given decoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>decoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.DataDecoder</span></code>) – The decoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The data to be decoded.</p></li>
+<li><p><strong>type</strong> – The data type.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A decoded instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.decode_schema">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.decode_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode schema with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>decoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.SchemaDecoder</span></code>) – The decoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The schema to be decoded.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The decoded schema as a type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.diff">
 <span class="sig-name descname"><span class="pre">diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">another</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/minos/aggregate/models/collections.html#IncrementalSet.diff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.diff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the difference between self and another entity set.
@@ -304,6 +347,48 @@
 :param value_object: The value object to be added.
 :rtype: <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>
 :return: This method does not return anything.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.encode_data">
+<span class="sig-name descname"><span class="pre">encode_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.encode_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode data with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.DataEncoder</span></code>) – The encoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – An optional pre-encoded data.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The encoded data of the instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.encode_schema">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encode_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.encode_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode schema with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.SchemaEncoder</span></code>) – The encoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – An optional pre-encoded schema.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The encoded schema of the instance.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">
@@ -324,8 +409,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>schema</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>]]]) – The avro schema of the model.</p></li>
-<li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>]) – The avro data of the model.</p></li>
+<li><p><strong>schema</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The avro schema of the model.</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The avro data of the model.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -339,11 +424,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.from_avro_bytes">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – A bytes data.</p>
+<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – A <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the model.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]</p>
@@ -356,11 +441,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.from_avro_str">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.from_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – A bytes data.</p>
+<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – A <code class="docutils literal notranslate"><span class="pre">str</span></code> representation of the model.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]</p>
@@ -449,7 +534,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.to_avro_bytes">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a bytes representation of the given object instances.</p>
+<dd><p>Create a <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>models</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]) – A sequence of minos models.</p>
@@ -466,7 +551,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSet.to_avro_str">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSet.to_avro_str" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a bytes representation of the given object instances.</p>
+<dd><p>Build the avro string representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>models</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]) – A sequence of minos models.</p>
@@ -543,7 +628,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.avro_schema">
-<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[{'name':</span> <span class="pre">'IncrementalSetDiff',</span> <span class="pre">'namespace':</span> <span class="pre">'minos.aggregate.models.collections.63603d9e-f9dc-4a84-9fc2-fc3dbcd58e20',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'diffs',</span> <span class="pre">'type':</span> <span class="pre">{'type':</span> <span class="pre">'array',</span> <span class="pre">'items':</span> <span class="pre">{'name':</span> <span class="pre">'SetDiffEntry',</span> <span class="pre">'namespace':</span> <span class="pre">'',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'action',</span> <span class="pre">'type':</span> <span class="pre">'string'},</span> <span class="pre">{'name':</span> <span class="pre">'entity',</span> <span class="pre">'type':</span> <span class="pre">'null'}]}}}]}]</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_schema" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">avro_schema</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[{'name':</span> <span class="pre">'IncrementalSetDiff',</span> <span class="pre">'namespace':</span> <span class="pre">'minos.aggregate.models.collections.899d5c14-4e4d-4748-a13f-4e7a28ea2180',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'diffs',</span> <span class="pre">'type':</span> <span class="pre">{'type':</span> <span class="pre">'array',</span> <span class="pre">'items':</span> <span class="pre">{'name':</span> <span class="pre">'SetDiffEntry',</span> <span class="pre">'namespace':</span> <span class="pre">'',</span> <span class="pre">'type':</span> <span class="pre">'record',</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'action',</span> <span class="pre">'type':</span> <span class="pre">{'type':</span> <span class="pre">'string',</span> <span class="pre">'logicalType':</span> <span class="pre">'minos.aggregate.models.actions.Action'}},</span> <span class="pre">{'name':</span> <span class="pre">'entity',</span> <span class="pre">'type':</span> <span class="pre">'null'}]}}}]}]</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.avro_schema" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
@@ -565,10 +650,95 @@
 <span class="sig-name descname"><span class="pre">classname</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'minos.aggregate.models.collections.IncrementalSetDiff'</span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.classname" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.decode_data">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.decode_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode data with the given decoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>decoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.DataDecoder</span></code>) – The decoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The data to be decoded.</p></li>
+<li><p><strong>type</strong> – The data type.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A decoded instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.decode_schema">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">decoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.decode_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode schema with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>decoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.SchemaDecoder</span></code>) – The decoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The schema to be decoded.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The decoded schema as a type.</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.diffs">
 <span class="sig-name descname"><span class="pre">diffs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">IncrementalSetDiffEntry</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.diffs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.encode_data">
+<span class="sig-name descname"><span class="pre">encode_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.encode_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode data with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.DataEncoder</span></code>) – The encoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – An optional pre-encoded data.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The encoded data of the instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.encode_schema">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encode_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.encode_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode schema with the given encoder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoder</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.common.model.serializers.abc.SchemaEncoder</span></code>) – The encoder instance.</p></li>
+<li><p><strong>target</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – An optional pre-encoded schema.</p></li>
+<li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The encoded schema of the instance.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.fields">
@@ -588,8 +758,8 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>schema</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>]]]) – The avro schema of the model.</p></li>
-<li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>]) – The avro data of the model.</p></li>
+<li><p><strong>schema</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The avro schema of the model.</p></li>
+<li><p><strong>data</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Any</span></code>) – The avro data of the model.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -603,11 +773,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.from_avro_bytes">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – A bytes data.</p>
+<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – A <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the model.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]</p>
@@ -620,11 +790,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.from_avro_str">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.from_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – A bytes data.</p>
+<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – A <code class="docutils literal notranslate"><span class="pre">str</span></code> representation of the model.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]</p>
@@ -709,7 +879,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.to_avro_bytes">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.to_avro_bytes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a bytes representation of the given object instances.</p>
+<dd><p>Create a <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>models</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]) – A sequence of minos models.</p>
@@ -726,7 +896,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.collections.IncrementalSetDiff.to_avro_str">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.collections.IncrementalSetDiff.to_avro_str" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a bytes representation of the given object instances.</p>
+<dd><p>Build the avro string representation of the given object instances.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>models</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]) – A sequence of minos models.</p>

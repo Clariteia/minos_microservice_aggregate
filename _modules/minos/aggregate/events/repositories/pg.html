@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.events.repositories.pg &mdash; Minos Microservice Aggregate 0.2.2 documentation</title>
+  <title>minos.aggregate.events.repositories.pg &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.2.2
+                0.2.3
               </div>
             
           
@@ -215,7 +215,7 @@
 
 <span class="sd">        :return: This method does not return anything.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">submit_query</span><span class="p">(</span><span class="s1">&#39;CREATE EXTENSION IF NOT EXISTS &quot;uuid-ossp&quot;;&#39;</span><span class="p">)</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">submit_query</span><span class="p">(</span><span class="s1">&#39;CREATE EXTENSION IF NOT EXISTS &quot;uuid-ossp&quot;;&#39;</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="s2">&quot;uuid-ossp&quot;</span><span class="p">)</span>
 
         <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">submit_query</span><span class="p">(</span><span class="n">_CREATE_ACTION_ENUM_QUERY</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="s2">&quot;aggregate_event&quot;</span><span class="p">)</span>
         <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">submit_query</span><span class="p">(</span><span class="n">_CREATE_TABLE_QUERY</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="s2">&quot;aggregate_event&quot;</span><span class="p">)</span>

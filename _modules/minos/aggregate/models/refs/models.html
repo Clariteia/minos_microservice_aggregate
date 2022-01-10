@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.models.refs.models &mdash; Minos Microservice Aggregate 0.2.2 documentation</title>
+  <title>minos.aggregate.models.refs.models &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.2.2
+                0.2.3
               </div>
             
           
@@ -185,23 +185,28 @@
 <span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">minos.common</span> <span class="kn">import</span> <span class="p">(</span>
-    <span class="n">AvroDataEncoder</span><span class="p">,</span>
+    <span class="n">DataDecoder</span><span class="p">,</span>
+    <span class="n">DataEncoder</span><span class="p">,</span>
     <span class="n">DeclarativeModel</span><span class="p">,</span>
-    <span class="n">Field</span><span class="p">,</span>
+    <span class="n">Model</span><span class="p">,</span>
+    <span class="n">ModelType</span><span class="p">,</span>
+    <span class="n">SchemaDecoder</span><span class="p">,</span>
+    <span class="n">SchemaEncoder</span><span class="p">,</span>
+    <span class="n">self_or_classmethod</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span> <span class="nn">minos.networks</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">DynamicBroker</span><span class="p">,</span>
     <span class="n">DynamicBrokerPool</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="kn">from</span> <span class="nn">...events</span> <span class="kn">import</span> <span class="p">(</span>
-    <span class="n">SUBMITTING_EVENT_CONTEXT_VAR</span><span class="p">,</span>
+<span class="kn">from</span> <span class="nn">...contextvars</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">IS_REPOSITORY_SERIALIZATION_CONTEXT_VAR</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span> <span class="nn">..entities</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">Entity</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">MT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;MT&quot;</span><span class="p">)</span>
+<span class="n">MT</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s2">&quot;MT&quot;</span><span class="p">,</span> <span class="n">bound</span><span class="o">=</span><span class="n">Model</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="AggregateRef"><a class="viewcode-back" href="../../../../../api/minos.aggregate.models.refs.models.html#minos.aggregate.models.refs.models.AggregateRef">[docs]</a><span class="k">class</span> <span class="nc">AggregateRef</span><span class="p">(</span><span class="n">Entity</span><span class="p">):</span>
@@ -213,31 +218,9 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">uuid</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="FieldRef"><a class="viewcode-back" href="../../../../../api/minos.aggregate.models.refs.models.html#minos.aggregate.models.refs.models.FieldRef">[docs]</a><span class="k">class</span> <span class="nc">FieldRef</span><span class="p">(</span><span class="n">Field</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Ref Field class.&quot;&quot;&quot;</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">avro_data</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Compute the avro data of the model.</span>
-
-<span class="sd">        If submitting is active then simply the identifier is used, otherwise the complete value is used.</span>
-
-<span class="sd">        :return: A dictionary object.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">SUBMITTING_EVENT_CONTEXT_VAR</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
-            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">avro_data</span>
-
-        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">UUID</span><span class="p">):</span>
-            <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">uuid</span>
-
-        <span class="k">return</span> <span class="n">AvroDataEncoder</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span></div>
-
-
 <div class="viewcode-block" id="ModelRef"><a class="viewcode-back" href="../../../../../api/minos.aggregate.models.refs.models.html#minos.aggregate.models.refs.models.ModelRef">[docs]</a><span class="k">class</span> <span class="nc">ModelRef</span><span class="p">(</span><span class="n">DeclarativeModel</span><span class="p">,</span> <span class="n">UUID</span><span class="p">,</span> <span class="n">Generic</span><span class="p">[</span><span class="n">MT</span><span class="p">]):</span>
     <span class="sd">&quot;&quot;&quot;Model Reference.&quot;&quot;&quot;</span>
 
-    <span class="n">_field_cls</span> <span class="o">=</span> <span class="n">FieldRef</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">MT</span><span class="p">,</span> <span class="n">UUID</span><span class="p">]</span>
 
 <div class="viewcode-block" id="ModelRef.__init__"><a class="viewcode-back" href="../../../../../api/minos.aggregate.models.refs.models.html#minos.aggregate.models.refs.models.ModelRef.__init__">[docs]</a>    <span class="nd">@inject</span>
@@ -274,6 +257,55 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">is_safe</span>
 
+    <span class="c1"># noinspection PyMethodParameters</span>
+<div class="viewcode-block" id="ModelRef.encode_schema"><a class="viewcode-back" href="../../../../../api/minos.aggregate.models.refs.models.html#minos.aggregate.models.refs.models.ModelRef.encode_schema">[docs]</a>    <span class="nd">@self_or_classmethod</span>
+    <span class="k">def</span> <span class="nf">encode_schema</span><span class="p">(</span><span class="n">self_or_cls</span><span class="p">,</span> <span class="n">encoder</span><span class="p">:</span> <span class="n">SchemaEncoder</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Encode schema with the given encoder.</span>
+
+<span class="sd">        :param encoder: The encoder instance.</span>
+<span class="sd">        :param target: An optional pre-encoded schema.</span>
+<span class="sd">        :return: The encoded schema of the instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">schema</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">type_hints</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[(</span><span class="n">sub</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;logicalType&quot;</span><span class="p">:</span> <span class="n">self_or_cls</span><span class="o">.</span><span class="n">classname</span><span class="p">})</span> <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="n">schema</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="ModelRef.decode_schema"><a class="viewcode-back" href="../../../../../api/minos.aggregate.models.refs.models.html#minos.aggregate.models.refs.models.ModelRef.decode_schema">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">decode_schema</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">decoder</span><span class="p">:</span> <span class="n">SchemaDecoder</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModelType</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Decode schema with the given encoder.</span>
+
+<span class="sd">        :param decoder: The decoder instance.</span>
+<span class="sd">        :param target: The schema to be decoded.</span>
+<span class="sd">        :return: The decoded schema as a type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">decoded</span> <span class="o">=</span> <span class="n">decoder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">ModelType</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The decoded type is not valid: </span><span class="si">{</span><span class="n">decoded</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ModelType</span><span class="o">.</span><span class="n">from_model</span><span class="p">(</span><span class="bp">cls</span><span class="p">[</span><span class="n">decoded</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="ModelRef.encode_data"><a class="viewcode-back" href="../../../../../api/minos.aggregate.models.refs.models.html#minos.aggregate.models.refs.models.ModelRef.encode_data">[docs]</a>    <span class="k">def</span> <span class="nf">encode_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoder</span><span class="p">:</span> <span class="n">DataEncoder</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Encode data with the given encoder.</span>
+
+<span class="sd">        :param encoder: The encoder instance.</span>
+<span class="sd">        :param target: An optional pre-encoded data.</span>
+<span class="sd">        :return: The encoded data of the instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">if</span> <span class="n">IS_REPOSITORY_SERIALIZATION_CONTEXT_VAR</span><span class="o">.</span><span class="n">get</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">UUID</span><span class="p">):</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">uuid</span>
+        <span class="k">return</span> <span class="n">encoder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ModelRef.decode_data"><a class="viewcode-back" href="../../../../../api/minos.aggregate.models.refs.models.html#minos.aggregate.models.refs.models.ModelRef.decode_data">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">decode_data</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">decoder</span><span class="p">:</span> <span class="n">DataDecoder</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">type_</span><span class="p">:</span> <span class="n">ModelType</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModelRef</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Decode data with the given decoder.</span>
+
+<span class="sd">        :param decoder: The decoder instance.</span>
+<span class="sd">        :param target: The data to be decoded.</span>
+<span class="sd">        :param type_: The data type.</span>
+<span class="sd">        :return: A decoded instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">decoded</span> <span class="o">=</span> <span class="n">decoder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">type_</span><span class="o">.</span><span class="n">type_hints</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ModelRef</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">additional_type_hints</span><span class="o">=</span><span class="n">type_</span><span class="o">.</span><span class="n">type_hints</span><span class="p">)</span></div>
+
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">uuid</span> <span class="o">==</span> <span class="n">other</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">other</span>
 
@@ -297,7 +329,7 @@
 <span class="sd">        :return: A model type.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type_hints</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">])</span>
-        <span class="k">if</span> <span class="n">args</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">MT</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">return</span> <span class="kc">None</span>
 

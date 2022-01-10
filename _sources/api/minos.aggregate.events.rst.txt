@@ -20,5 +20,4 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   minos.aggregate.events.contextvars
    minos.aggregate.events.entries

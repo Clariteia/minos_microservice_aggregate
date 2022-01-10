@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>History &mdash; Minos Microservice Aggregate 0.2.2 documentation</title>
+  <title>History &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                0.2.2
+                0.2.3
               </div>
             
           
@@ -102,6 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id3">0.2.0 (2021-11-15)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">0.2.1 (2021-11-16)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id5">0.2.2 (2021-11-22)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">0.2.3 (2022-01-10)</a></li>
 </ul>
 </li>
 </ul>
@@ -214,6 +215,15 @@
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">ModelRef.resolve(...)</span></code> method to resolve <code class="docutils literal notranslate"><span class="pre">ModelRef</span></code> instances.</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">ModelRefResolver</span></code> to resolve <code class="docutils literal notranslate"><span class="pre">ModelRef</span></code> instances in batch.</p></li>
 <li><p>Fix bug that published <em>Domain Events</em> when non-top-level transactions are committed.</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>0.2.3 (2022-01-10)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Remove the <code class="docutils literal notranslate"><span class="pre">data</span></code> wrapper from the <code class="docutils literal notranslate"><span class="pre">ModelRef</span></code>‘s avro serialization.</p></li>
+<li><p>Add support for search by <code class="docutils literal notranslate"><span class="pre">ModelRef</span></code> instances on the <code class="docutils literal notranslate"><span class="pre">PostgreSqlSnapshot</span></code>.</p></li>
+<li><p>Fix bug related with the <code class="docutils literal notranslate"><span class="pre">IS_REPOSITORY_SERIALIZATION_CONTEXT_VAR</span></code>, used to store on the repository only the references to another aggregates.</p></li>
+<li><p>Fix bug related with concurrent enabling of the <code class="docutils literal notranslate"><span class="pre">uuid-ossp</span></code> extension from <code class="docutils literal notranslate"><span class="pre">postgres</span></code>.</p></li>
 </ul>
 </div>
 </div>
