@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.models.diffs.aggregates module &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
+  <title>minos.aggregate.models.diffs.aggregates module &mdash; Minos Microservice Aggregate 0.2.4 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.2.3
+                0.2.4
               </div>
             
           
@@ -385,12 +385,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>aggregate</strong> (<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><em>Aggregate</em></a>) – An <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instance.</p></li>
-<li><p><strong>action</strong> (<a class="reference internal" href="minos.aggregate.models.actions.html#minos.aggregate.models.actions.Action" title="minos.aggregate.models.actions.Action"><em>Action</em></a>) – The action to that generates the aggregate difference.</p></li>
+<li><p><strong>aggregate</strong> (<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.aggregates.Aggregate</span></code></a>) – An <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instance.</p></li>
+<li><p><strong>action</strong> (<a class="reference internal" href="minos.aggregate.models.actions.html#minos.aggregate.models.actions.Action" title="minos.aggregate.models.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.actions.Action</span></code></a>) – The action to that generates the aggregate difference.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff">AggregateDiff</a></p>
+<dd class="field-even"><p><a class="reference internal" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.diffs.aggregates.AggregateDiff</span></code></a></p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>An <code class="docutils literal notranslate"><span class="pre">AggregateDiff</span></code> instance.</p>
@@ -420,24 +420,25 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_bytes">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_bytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – A <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the model.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>A single instance or a sequence of instances.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>) – A <code class="docutils literal notranslate"><span class="pre">bytes</span></code> representation of the model.</p></li>
+<li><p><strong>batch_mode</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> the data is processed as a list of models, otherwise the data is processed as a</p></li>
+</ul>
 </dd>
 </dl>
+<p>single model.
+:param kwargs: Additional named arguments.
+:rtype: <code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Union</span></code>[~T, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[~T]]
+:return: A single instance or a sequence of instances.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_str">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_str" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_avro_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff.from_avro_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build a single instance or a sequence of instances from bytes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -459,12 +460,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>aggregate</strong> (<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><em>Aggregate</em></a>) – An <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instance.</p></li>
-<li><p><strong>action</strong> (<a class="reference internal" href="minos.aggregate.models.actions.html#minos.aggregate.models.actions.Action" title="minos.aggregate.models.actions.Action"><em>Action</em></a>) – The action to that generates the aggregate difference.</p></li>
+<li><p><strong>aggregate</strong> (<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.aggregates.Aggregate</span></code></a>) – An <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instance.</p></li>
+<li><p><strong>action</strong> (<a class="reference internal" href="minos.aggregate.models.actions.html#minos.aggregate.models.actions.Action" title="minos.aggregate.models.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.actions.Action</span></code></a>) – The action to that generates the aggregate difference.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff">AggregateDiff</a></p>
+<dd class="field-even"><p><a class="reference internal" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.diffs.aggregates.AggregateDiff</span></code></a></p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>An <code class="docutils literal notranslate"><span class="pre">AggregateDiff</span></code> instance.</p>
@@ -479,13 +480,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><em>Aggregate</em></a>) – One <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instance.</p></li>
-<li><p><strong>b</strong> (<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><em>Aggregate</em></a>) – Another <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instance.</p></li>
-<li><p><strong>action</strong> (<a class="reference internal" href="minos.aggregate.models.actions.html#minos.aggregate.models.actions.Action" title="minos.aggregate.models.actions.Action"><em>Action</em></a>) – The action to that generates the aggregate difference.</p></li>
+<li><p><strong>a</strong> (<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.aggregates.Aggregate</span></code></a>) – One <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instance.</p></li>
+<li><p><strong>b</strong> (<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.aggregates.Aggregate</span></code></a>) – Another <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instance.</p></li>
+<li><p><strong>action</strong> (<a class="reference internal" href="minos.aggregate.models.actions.html#minos.aggregate.models.actions.Action" title="minos.aggregate.models.actions.Action"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.actions.Action</span></code></a>) – The action to that generates the aggregate difference.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff">AggregateDiff</a></p>
+<dd class="field-even"><p><a class="reference internal" href="#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.diffs.aggregates.AggregateDiff</span></code></a></p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>An <code class="docutils literal notranslate"><span class="pre">AggregateDiff</span></code> instance.</p>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.events.entries module &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
+  <title>minos.aggregate.events.entries module &mdash; Minos Microservice Aggregate 0.2.4 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.2.3
+                0.2.4
               </div>
             
           
@@ -200,11 +200,11 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.events.entries.EventEntry.aggregate_cls">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aggregate_cls</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">Aggregate</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.aggregate_cls" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aggregate_cls</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><span class="pre">minos.aggregate.models.aggregates.Aggregate</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.aggregate_cls" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load the concrete <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Type[<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate">Aggregate</a>]</p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.Type</span></code>[<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.aggregates.Aggregate</span></code></a>]</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A <code class="docutils literal notranslate"><span class="pre">Type</span></code> object.</p>
@@ -214,11 +214,11 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.events.entries.EventEntry.aggregate_diff">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aggregate_diff</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">AggregateDiff</span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.aggregate_diff" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aggregate_diff</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="minos.aggregate.models.diffs.aggregates.html#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff"><span class="pre">minos.aggregate.models.diffs.aggregates.AggregateDiff</span></a></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.aggregate_diff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the stored <code class="docutils literal notranslate"><span class="pre">AggregateDiff</span></code> instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="minos.aggregate.models.diffs.aggregates.html#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff">AggregateDiff</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="minos.aggregate.models.diffs.aggregates.html#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.diffs.aggregates.AggregateDiff</span></code></a></p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>An <code class="docutils literal notranslate"><span class="pre">AggregateDiff</span></code> instance.</p>
@@ -262,11 +262,11 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="minos.aggregate.events.entries.EventEntry.field_diff_container">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">field_diff_container</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">FieldDiffContainer</span></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.field_diff_container" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">field_diff_container</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="minos.aggregate.models.diffs.fields.html#minos.aggregate.models.diffs.fields.FieldDiffContainer" title="minos.aggregate.models.diffs.fields.FieldDiffContainer"><span class="pre">minos.aggregate.models.diffs.fields.FieldDiffContainer</span></a></em><a class="headerlink" href="#minos.aggregate.events.entries.EventEntry.field_diff_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the stored field diff container.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="minos.aggregate.models.diffs.fields.html#minos.aggregate.models.diffs.fields.FieldDiffContainer" title="minos.aggregate.models.diffs.fields.FieldDiffContainer">FieldDiffContainer</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="minos.aggregate.models.diffs.fields.html#minos.aggregate.models.diffs.fields.FieldDiffContainer" title="minos.aggregate.models.diffs.fields.FieldDiffContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.diffs.fields.FieldDiffContainer</span></code></a></p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A <code class="docutils literal notranslate"><span class="pre">FieldDiffContainer</span></code> instance.</p>
@@ -281,13 +281,13 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>aggregate_diff</strong> (<a class="reference internal" href="minos.aggregate.models.diffs.aggregates.html#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff"><em>AggregateDiff</em></a>) – The aggregate difference.</p></li>
-<li><p><strong>transaction</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="minos.aggregate.transactions.entries.html#minos.aggregate.transactions.entries.TransactionEntry" title="minos.aggregate.transactions.entries.TransactionEntry"><em>TransactionEntry</em></a><em>]</em>) – Optional transaction.</p></li>
+<li><p><strong>aggregate_diff</strong> (<a class="reference internal" href="minos.aggregate.models.diffs.aggregates.html#minos.aggregate.models.diffs.aggregates.AggregateDiff" title="minos.aggregate.models.diffs.aggregates.AggregateDiff"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.diffs.aggregates.AggregateDiff</span></code></a>) – The aggregate difference.</p></li>
+<li><p><strong>transaction</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Optional</span></code>[<a class="reference internal" href="minos.aggregate.transactions.entries.html#minos.aggregate.transactions.entries.TransactionEntry" title="minos.aggregate.transactions.entries.TransactionEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.transactions.entries.TransactionEntry</span></code></a>]) – Optional transaction.</p></li>
 <li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#minos.aggregate.events.entries.EventEntry" title="minos.aggregate.events.entries.EventEntry">EventEntry</a></p>
+<dd class="field-even"><p><a class="reference internal" href="#minos.aggregate.events.entries.EventEntry" title="minos.aggregate.events.entries.EventEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.events.entries.EventEntry</span></code></a></p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A new <code class="docutils literal notranslate"><span class="pre">EventEntry</span></code> instance.</p>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.snapshots.abc module &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
+  <title>minos.aggregate.snapshots.abc module &mdash; Minos Microservice Aggregate 0.2.4 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.2.3
+                0.2.4
               </div>
             
           
@@ -243,22 +243,22 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>aggregate_name</strong> (<em>str</em>) – Class name of the <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code>.</p></li>
-<li><p><strong>condition</strong> (<em>_Condition</em>) – The condition that must be satisfied by the <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instances.</p></li>
-<li><p><strong>ordering</strong> (<em>Optional</em><em>[</em><em>_Ordering</em><em>]</em>) – Optional argument to return the instance with specific ordering strategy. The default behaviour
+<li><p><strong>aggregate_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Class name of the <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code>.</p></li>
+<li><p><strong>condition</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.queries._Condition</span></code>) – The condition that must be satisfied by the <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instances.</p></li>
+<li><p><strong>ordering</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.queries._Ordering</span></code>]) – Optional argument to return the instance with specific ordering strategy. The default behaviour
 is to retrieve them without any order pattern.</p></li>
-<li><p><strong>limit</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em>) – Optional argument to return only a subset of instances. The default behaviour is to return all the
+<li><p><strong>limit</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Optional argument to return only a subset of instances. The default behaviour is to return all the
 instances that meet the given condition.</p></li>
-<li><p><strong>streaming_mode</strong> (<em>bool</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> return the values in streaming directly from the database (keep an open
+<li><p><strong>streaming_mode</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code> return the values in streaming directly from the database (keep an open
 database connection), otherwise preloads the full set of values on memory and then retrieves them.</p></li>
-<li><p><strong>transaction</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="minos.aggregate.transactions.entries.html#minos.aggregate.transactions.entries.TransactionEntry" title="minos.aggregate.transactions.entries.TransactionEntry"><em>TransactionEntry</em></a><em>]</em>) – The transaction within the operation is performed. If not any value is provided, then the
+<li><p><strong>transaction</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Optional</span></code>[<a class="reference internal" href="minos.aggregate.transactions.entries.html#minos.aggregate.transactions.entries.TransactionEntry" title="minos.aggregate.transactions.entries.TransactionEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.transactions.entries.TransactionEntry</span></code></a>]) – The transaction within the operation is performed. If not any value is provided, then the
 transaction is extracted from the context var. If not any transaction is being scoped then the query is
 performed to the global snapshot.</p></li>
 <li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>AsyncIterator[<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate">Aggregate</a>]</p>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">typing.AsyncIterator</span></code>[<a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.aggregates.Aggregate</span></code></a>]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>An asynchronous iterator that containing the <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instances.</p>
@@ -293,16 +293,16 @@ performed to the global snapshot.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>aggregate_name</strong> (<em>str</em>) – Class name of the <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code>.</p></li>
-<li><p><strong>uuid</strong> (<em>UUID</em>) – Identifier of the <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code>.</p></li>
-<li><p><strong>transaction</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="minos.aggregate.transactions.entries.html#minos.aggregate.transactions.entries.TransactionEntry" title="minos.aggregate.transactions.entries.TransactionEntry"><em>TransactionEntry</em></a><em>]</em>) – The transaction within the operation is performed. If not any value is provided, then the
+<li><p><strong>aggregate_name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Class name of the <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code>.</p></li>
+<li><p><strong>uuid</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uuid.UUID</span></code>) – Identifier of the <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code>.</p></li>
+<li><p><strong>transaction</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">typing.Optional</span></code>[<a class="reference internal" href="minos.aggregate.transactions.entries.html#minos.aggregate.transactions.entries.TransactionEntry" title="minos.aggregate.transactions.entries.TransactionEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.transactions.entries.TransactionEntry</span></code></a>]) – The transaction within the operation is performed. If not any value is provided, then the
 transaction is extracted from the context var. If not any transaction is being scoped then the query is
 performed to the global snapshot.</p></li>
 <li><p><strong>kwargs</strong> – Additional named arguments.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate">Aggregate</a></p>
+<dd class="field-even"><p><a class="reference internal" href="minos.aggregate.models.aggregates.html#minos.aggregate.models.aggregates.Aggregate" title="minos.aggregate.models.aggregates.Aggregate"><code class="xref py py-class docutils literal notranslate"><span class="pre">minos.aggregate.models.aggregates.Aggregate</span></code></a></p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The <code class="docutils literal notranslate"><span class="pre">Aggregate</span></code> instance.</p>

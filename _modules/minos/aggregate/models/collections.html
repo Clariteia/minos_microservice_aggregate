@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>minos.aggregate.models.collections &mdash; Minos Microservice Aggregate 0.2.3 documentation</title>
+  <title>minos.aggregate.models.collections &mdash; Minos Microservice Aggregate 0.2.4 documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.2.3
+                0.2.4
               </div>
             
           
@@ -181,8 +181,12 @@
 <span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">minos.common</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">DataDecoder</span><span class="p">,</span>
+    <span class="n">DataEncoder</span><span class="p">,</span>
     <span class="n">DeclarativeModel</span><span class="p">,</span>
     <span class="n">ModelType</span><span class="p">,</span>
+    <span class="n">SchemaDecoder</span><span class="p">,</span>
+    <span class="n">SchemaEncoder</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">.actions</span> <span class="kn">import</span> <span class="p">(</span>
@@ -205,14 +209,14 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="IncrementalSet.add"><a class="viewcode-back" href="../../../../api/minos.aggregate.models.collections.html#minos.aggregate.models.collections.IncrementalSet.add">[docs]</a>    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_object</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Add an value object.</span>
+        <span class="sd">&quot;&quot;&quot;Add a value object.</span>
 <span class="sd">        :param value_object: The value object to be added.</span>
 <span class="sd">        :return: This method does not return anything.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">value_object</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="IncrementalSet.discard"><a class="viewcode-back" href="../../../../api/minos.aggregate.models.collections.html#minos.aggregate.models.collections.IncrementalSet.discard">[docs]</a>    <span class="k">def</span> <span class="nf">discard</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_object</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Remove an value object.</span>
+        <span class="sd">&quot;&quot;&quot;Remove a value object.</span>
 <span class="sd">        :param value_object: The value object to be added.</span>
 <span class="sd">        :return: This method does not return anything.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -246,7 +250,52 @@
 <span class="sd">        :return: A model type.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type_hints</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">])</span>
-        <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div>
+        <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># noinspection PyMethodParameters</span>
+<div class="viewcode-block" id="IncrementalSet.encode_schema"><a class="viewcode-back" href="../../../../api/minos.aggregate.models.collections.html#minos.aggregate.models.collections.IncrementalSet.encode_schema">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">encode_schema</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">encoder</span><span class="p">:</span> <span class="n">SchemaEncoder</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Encode schema with the given encoder.</span>
+
+<span class="sd">        :param encoder: The encoder instance.</span>
+<span class="sd">        :param target: An optional pre-encoded schema.</span>
+<span class="sd">        :return: The encoded schema of the instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">schema</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">type_hints</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">schema</span> <span class="o">|</span> <span class="p">{</span><span class="s2">&quot;logicalType&quot;</span><span class="p">:</span> <span class="bp">cls</span><span class="o">.</span><span class="n">classname</span><span class="p">}</span></div>
+
+<div class="viewcode-block" id="IncrementalSet.decode_schema"><a class="viewcode-back" href="../../../../api/minos.aggregate.models.collections.html#minos.aggregate.models.collections.IncrementalSet.decode_schema">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">decode_schema</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">decoder</span><span class="p">:</span> <span class="n">SchemaDecoder</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ModelType</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Decode schema with the given encoder.</span>
+
+<span class="sd">        :param decoder: The decoder instance.</span>
+<span class="sd">        :param target: The schema to be decoded.</span>
+<span class="sd">        :return: The decoded schema as a type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">decoded</span> <span class="o">=</span> <span class="n">decoder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ModelType</span><span class="o">.</span><span class="n">from_model</span><span class="p">(</span><span class="bp">cls</span><span class="p">[</span><span class="n">get_args</span><span class="p">(</span><span class="n">decoded</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span></div>
+
+<div class="viewcode-block" id="IncrementalSet.encode_data"><a class="viewcode-back" href="../../../../api/minos.aggregate.models.collections.html#minos.aggregate.models.collections.IncrementalSet.encode_data">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">encode_data</span><span class="p">(</span><span class="n">encoder</span><span class="p">:</span> <span class="n">DataEncoder</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Encode data with the given encoder.</span>
+
+<span class="sd">        :param encoder: The encoder instance.</span>
+<span class="sd">        :param target: An optional pre-encoded data.</span>
+<span class="sd">        :return: The encoded data of the instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">encoder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">target</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="IncrementalSet.decode_data"><a class="viewcode-back" href="../../../../api/minos.aggregate.models.collections.html#minos.aggregate.models.collections.IncrementalSet.decode_data">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">decode_data</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">decoder</span><span class="p">:</span> <span class="n">DataDecoder</span><span class="p">,</span> <span class="n">target</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">type_</span><span class="p">:</span> <span class="n">ModelType</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IncrementalSet</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Decode data with the given decoder.</span>
+
+<span class="sd">        :param decoder: The decoder instance.</span>
+<span class="sd">        :param target: The data to be decoded.</span>
+<span class="sd">        :param type_: The data type.</span>
+<span class="sd">        :return: A decoded instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">decoded</span> <span class="o">=</span> <span class="n">decoder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">type_</span><span class="o">.</span><span class="n">type_hints</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">additional_type_hints</span><span class="o">=</span><span class="n">type_</span><span class="o">.</span><span class="n">type_hints</span><span class="p">)</span></div></div>
 
 
 <span class="n">IncrementalSetDiffEntry</span> <span class="o">=</span> <span class="n">ModelType</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="s2">&quot;SetDiffEntry&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="n">Action</span><span class="p">,</span> <span class="s2">&quot;entity&quot;</span><span class="p">:</span> <span class="n">Any</span><span class="p">})</span>
