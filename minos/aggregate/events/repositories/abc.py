@@ -1,11 +1,17 @@
-from __future__ import annotations
+from __future__ import (
+    annotations,
+)
 
 from abc import (
     ABC,
     abstractmethod,
 )
-from asyncio import gather
-from contextlib import suppress
+from asyncio import (
+    gather,
+)
+from contextlib import (
+    suppress,
+)
 from typing import (
     TYPE_CHECKING,
     AsyncIterator,
@@ -13,7 +19,9 @@ from typing import (
     Optional,
     Union,
 )
-from uuid import UUID
+from uuid import (
+    UUID,
+)
 
 from dependency_injector.wiring import (
     Provide,
@@ -34,7 +42,9 @@ from minos.networks import (
     BrokerPublisher,
 )
 
-from ...contextvars import IS_REPOSITORY_SERIALIZATION_CONTEXT_VAR
+from ...contextvars import (
+    IS_REPOSITORY_SERIALIZATION_CONTEXT_VAR,
+)
 from ...exceptions import (
     EventRepositoryConflictException,
     EventRepositoryException,
@@ -45,10 +55,14 @@ from ...transactions import (
     TransactionRepository,
     TransactionStatus,
 )
-from ..entries import EventEntry
+from ..entries import (
+    EventEntry,
+)
 
 if TYPE_CHECKING:
-    from ...models import AggregateDiff
+    from ...models import (
+        AggregateDiff,
+    )
 
 
 class EventRepository(ABC, MinosSetup):
@@ -92,7 +106,9 @@ class EventRepository(ABC, MinosSetup):
         :param entry: Entry to be stored.
         :return: The repository entry containing the stored information.
         """
-        from ...models import Action
+        from ...models import (
+            Action,
+        )
 
         entry.action = Action.CREATE
         return await self.submit(entry)
@@ -103,7 +119,9 @@ class EventRepository(ABC, MinosSetup):
         :param entry: Entry to be stored.
         :return: The repository entry containing the stored information.
         """
-        from ...models import Action
+        from ...models import (
+            Action,
+        )
 
         entry.action = Action.UPDATE
         return await self.submit(entry)
@@ -114,7 +132,9 @@ class EventRepository(ABC, MinosSetup):
         :param entry: Entry to be stored.
         :return: The repository entry containing the stored information.
         """
-        from ...models import Action
+        from ...models import (
+            Action,
+        )
 
         entry.action = Action.DELETE
         return await self.submit(entry)
@@ -189,7 +209,9 @@ class EventRepository(ABC, MinosSetup):
         raise NotImplementedError
 
     async def _send_events(self, aggregate_diff: AggregateDiff):
-        from ...models import Action
+        from ...models import (
+            Action,
+        )
 
         suffix_mapper = {
             Action.CREATE: "Created",
@@ -205,7 +227,9 @@ class EventRepository(ABC, MinosSetup):
         futures = [self._broker_publisher.send(message)]
 
         if aggregate_diff.action == Action.UPDATE:
-            from ...models import IncrementalFieldDiff
+            from ...models import (
+                IncrementalFieldDiff,
+            )
 
             for decomposed_aggregate_diff in aggregate_diff.decompose():
                 diff = next(iter(decomposed_aggregate_diff.fields_diff.flatten_values()))

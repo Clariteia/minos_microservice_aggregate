@@ -1,4 +1,6 @@
-from __future__ import annotations
+from __future__ import (
+    annotations,
+)
 
 from typing import (
     Any,
@@ -29,13 +31,17 @@ from minos.common import (
 )
 from minos.networks import (
     Broker,
-    BrokerPool,
     BrokerMessageV1,
     BrokerMessageV1Payload,
+    BrokerPool,
 )
 
-from ...contextvars import IS_REPOSITORY_SERIALIZATION_CONTEXT_VAR
-from ..entities import Entity
+from ...contextvars import (
+    IS_REPOSITORY_SERIALIZATION_CONTEXT_VAR,
+)
+from ..entities import (
+    Entity,
+)
 
 MT = TypeVar("MT", bound=Model)
 
