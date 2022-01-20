@@ -1,27 +1,15 @@
-from asyncio import (
-    gather,
-)
-from collections.abc import (
-    Iterable,
-)
-from itertools import (
-    chain,
-)
-from typing import (
-    Any,
-)
-from uuid import (
-    UUID,
-)
+from asyncio import gather
+from collections.abc import Iterable
+from itertools import chain
+from typing import Any
+from uuid import UUID
 
 from dependency_injector.wiring import (
     Provide,
     inject,
 )
 
-from minos.common import (
-    Model,
-)
+from minos.common import Model
 from minos.networks import (
     BrokerMessageV1,
     BrokerMessageV1Payload,
@@ -29,12 +17,8 @@ from minos.networks import (
     BrokerPool,
 )
 
-from .extractors import (
-    ModelRefExtractor,
-)
-from .injectors import (
-    ModelRefInjector,
-)
+from .extractors import ModelRefExtractor
+from .injectors import ModelRefInjector
 
 
 class ModelRefResolver:
